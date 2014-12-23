@@ -25,6 +25,15 @@ define( 'NS_NEPALI_DATE_URL', rtrim( plugin_dir_url( __FILE__ ), '/' ) );
 
 require_once( NS_NEPALI_DATE_DIR . '/inc/nepali_calendar.php' );
 
+add_filter( 'get_the_date', 'ns_nepali_date_implement', 10, 3 );
+function ns_nepali_date_implement($the_date, $d, $post){
+
+  if ( ! is_admin() ) {
+      $the_date = get_the_date_nepali( $the_date );
+  }
+  return $the_date;
+
+}
 
 /**
  * get_the_date_nepali
