@@ -7,6 +7,7 @@
  * Author: Nilambar Sharma
  * Author URI: https://www.nilambar.net
  * Text Domain: ns-nepali-date
+ * GitHub Plugin URI: ernilambar/ns-nepali-date
  * License: GPL-2.0+
  * License URI: http://www.gnu.org/licenses/gpl-2.0.txt
  *
