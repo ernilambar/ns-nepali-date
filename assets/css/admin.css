@@ -1,0 +1,39 @@
+.field-nsnd-format .format-list li {
+	display: inline-block;
+	margin-right: 10px;
+}
+
+.field-nsnd-format .example-formats {
+	margin-top: 10px;
+}
+
+.field-nsnd-format .example-formats .title {
+	display: inline-block;
+	margin-right: 5px;
+}
+
+.field-nsnd-format .example-formats a {
+	margin-right: 15px;
+}
+
+.format-reference {
+	margin-top: 10px;
+}
+
+.format-reference-content {
+	display: none;
+}
+
+.field-nsnd-format table {
+	border-collapse: collapse;
+	margin-top: 10px;
+}
+
+.field-nsnd-format table tr.heading {
+	font-weight: 700;
+}
+
+.field-nsnd-format table td {
+	padding: 5px !important;
+	border: 1px #DDD solid;
+}
