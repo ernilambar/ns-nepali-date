@@ -9,7 +9,7 @@
 **License:** GPLv2 or later  
 **License URI:** http://www.gnu.org/licenses/gpl-2.0.html  
 
-Simple WordPress plugin to display post date in Nepali date
+Simple WordPress plugin to display post date in Nepali
 
 ## Description 
 
