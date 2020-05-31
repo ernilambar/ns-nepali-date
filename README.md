@@ -5,7 +5,7 @@
 **Requires at least:** 5.0  
 **Requires PHP:** 5.6.20  
 **Tested up to:** 5.4  
-**Stable tag:** 1.0.0  
+**Stable tag:** 1.0.1  
 **License:** GPLv2 or later  
 **License URI:** http://www.gnu.org/licenses/gpl-2.0.html  
 
@@ -42,9 +42,13 @@ Nice, create an issue on the [Plugin Repo](https://github.com/ernilambar/ns-nepa
 
 ## Changelog 
 
-### 1.0.0 - 30 May 2020 
+### 1.0.1 - 30 May 2020 
 
-* First release
+* Add plugin option
+
+### 1.0.0 - 20 Jan 2014 
+
+* Initial release
 
 ## Upgrade Notice
 
