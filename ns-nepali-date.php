@@ -23,6 +23,8 @@ define( 'NS_NEPALI_DATE_BASENAME', basename( dirname( __FILE__ ) ) );
 define( 'NS_NEPALI_DATE_DIR', rtrim( plugin_dir_path( __FILE__ ), '/' ) );
 define( 'NS_NEPALI_DATE_URL', rtrim( plugin_dir_url( __FILE__ ), '/' ) );
 
+require 'vendor/autoload.php';
+
 require_once NS_NEPALI_DATE_DIR . '/inc/classes/class-ns-nepali-date.php';
 require_once NS_NEPALI_DATE_DIR . '/inc/classes/class-ns-nepali-date-admin.php';
 require_once NS_NEPALI_DATE_DIR . '/inc/helpers/helpers.php';

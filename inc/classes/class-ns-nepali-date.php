@@ -5,6 +5,8 @@
  * @package NS_Nepali_Date
  */
 
+use ErNilambar\NepaliDate\NepaliDate;
+
 /**
  * Plugin class.
  *
@@ -101,18 +103,18 @@ class NS_Nepali_Date {
 	 *
 	 * @since 1.0.0
 	 *
-	 * @param string      $date     The formatted date.
-	 * @param string      $format   PHP date format.
-	 * @param int|WP_Post $post     The post object or ID.
+	 * @param string      $date    The formatted date.
+	 * @param string      $format PHP date format.
+	 * @param int|WP_Post $post   The post object or ID.
 	 */
 	public function replace_date( $date, $format, $post ) {
-		$cal_object = new Nepali_Calendar();
+		$cal_object = new NepaliDate();
 
 		$date_ymd = gmdate( 'Y-m-d', strtotime( $date ) );
 
 		list( $year, $month, $day ) = explode( '-', $date_ymd );
 
-		$new_date = $cal_object->eng_to_nep( $year, $month, $day );
+		$new_date = $cal_object->ad_to_bs( $year, $month, $day );
 
 		$date_details = ns_nepali_date_get_date_details( $new_date, $this->options['nsnd_language'] );
 

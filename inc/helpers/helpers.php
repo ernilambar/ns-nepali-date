@@ -5,6 +5,20 @@
  * @package NS_Nepali_Date
  */
 
+// use ErNilambar\NepaliDate\NepaliDate;
+
+// $nd = new NepaliDate();
+// try {
+// 	$dd_english = $nd->ad_to_bs(2020,1,1);
+// 	nspre( $dd_english );
+
+// 	$dd_nepali = $nd->bs_to_ad(2077,1,1);
+// 	nspre( $dd_nepali );
+// }
+// catch(Exception $e) {
+//   echo 'Message: ' .$e->getMessage();
+// }
+
 /**
  * Get formatted date.
  *
@@ -44,23 +58,23 @@ function ns_nepali_date_get_date_details( $date, $language ) {
 	if ( 'np' === $language ) {
 		$output['Y'] = ns_nepali_date_get_nepali_number( $date['year'] );
 		$output['y'] = ns_nepali_date_get_nepali_number( $year2 );
-		$output['j'] = ns_nepali_date_get_nepali_number( $date['date'] );
-		$output['d'] = ns_nepali_date_get_nepali_number( $date['date'], true );
+		$output['j'] = ns_nepali_date_get_nepali_number( $date['day'] );
+		$output['d'] = ns_nepali_date_get_nepali_number( $date['day'], true );
 		$output['F'] = ns_nepali_date_get_month_text( $date['month'], $language );
 		$output['n'] = ns_nepali_date_get_nepali_number( $date['month'] );
 		$output['m'] = ns_nepali_date_get_nepali_number( $date['month'], true );
-		$output['l'] = ns_nepali_date_get_nepali_day_text( $date['num_day'] );
-		$output['D'] = ns_nepali_date_get_nepali_day_text( $date['num_day'], 'D' );
+		$output['l'] = ns_nepali_date_get_nepali_day_text( $date['weekday'] );
+		$output['D'] = ns_nepali_date_get_nepali_day_text( $date['weekday'], 'D' );
 	} else {
 		$output['Y'] = (string)$date['year'];
 		$output['y'] = $year2;
-		$output['j'] = (string)$date['date'];
-		$output['d'] = str_pad( $date['date'], 2, '0', STR_PAD_LEFT );
+		$output['j'] = (string)$date['day'];
+		$output['d'] = str_pad( $date['day'], 2, '0', STR_PAD_LEFT );
 		$output['F'] = ns_nepali_date_get_month_text( $date['month'], $language );
 		$output['n'] = (string)$date['month'];
 		$output['m'] = str_pad( $date['month'], 2, '0', STR_PAD_LEFT );
-		$output['l'] = ns_nepali_date_get_english_day_text( $date['num_day'] );
-		$output['D'] = ns_nepali_date_get_english_day_text( $date['num_day'], 'D' );
+		$output['l'] = ns_nepali_date_get_english_day_text( $date['weekday'] );
+		$output['D'] = ns_nepali_date_get_english_day_text( $date['weekday'], 'D' );
 	}
 
 	return $output;
