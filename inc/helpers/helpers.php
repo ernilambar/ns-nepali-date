@@ -5,25 +5,6 @@
  * @package NS_Nepali_Date
  */
 
-use ErNilambar\NepaliDate\NepaliDate;
-
-$nd = new NepaliDate();
-try {
-	$dd_english = $nd->ad_to_bs(2020,1,1);
-	nspre( $dd_english, 'first' );
-
-	$detail = $nd->get_date_details( $dd_english );
-	nspre( $detail, 'detail' );
-
-	// $dd_nepali = $nd->bs_to_ad(2077,1,1);
-	// nspre( $dd_nepali );
-}
-catch(Exception $e) {
-  echo 'Message: ' .$e->getMessage();
-}
-
-return;
-
 /**
  * Get example formats.
  *
