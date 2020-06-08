@@ -52,12 +52,12 @@ function ns_nepali_date_get_date_details( $date, $language ) {
 		$output['l'] = ns_nepali_date_get_nepali_day_text( $date['num_day'] );
 		$output['D'] = ns_nepali_date_get_nepali_day_text( $date['num_day'], 'D' );
 	} else {
-		$output['Y'] = $date['year'];
+		$output['Y'] = (string)$date['year'];
 		$output['y'] = $year2;
-		$output['j'] = $date['date'];
+		$output['j'] = (string)$date['date'];
 		$output['d'] = str_pad( $date['date'], 2, '0', STR_PAD_LEFT );
 		$output['F'] = ns_nepali_date_get_month_text( $date['month'], $language );
-		$output['n'] = $date['month'];
+		$output['n'] = (string)$date['month'];
 		$output['m'] = str_pad( $date['month'], 2, '0', STR_PAD_LEFT );
 		$output['l'] = ns_nepali_date_get_english_day_text( $date['num_day'] );
 		$output['D'] = ns_nepali_date_get_english_day_text( $date['num_day'], 'D' );
