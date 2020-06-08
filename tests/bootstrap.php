@@ -2,7 +2,7 @@
 /**
  * PHPUnit bootstrap file
  *
- * @package Ns_Nepali_Date
+ * @package NS_Nepali_Date
  */
 
 $_tests_dir = getenv( 'WP_TESTS_DIR' );

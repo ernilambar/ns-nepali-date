@@ -2,7 +2,7 @@
 /**
  * Class DayTest
  *
- * @package Ns_Nepali_Date
+ * @package NS_Nepali_Date
  */
 
 /**
