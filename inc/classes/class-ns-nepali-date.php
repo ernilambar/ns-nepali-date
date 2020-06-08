@@ -108,17 +108,17 @@ class NS_Nepali_Date {
 	 * @param int|WP_Post $post   The post object or ID.
 	 */
 	public function replace_date( $date, $format, $post ) {
-		$cal_object = new NepaliDate();
+		$nd_object = new NepaliDate();
 
 		$date_ymd = gmdate( 'Y-m-d', strtotime( $date ) );
 
 		list( $year, $month, $day ) = explode( '-', $date_ymd );
 
-		$new_date = $cal_object->ad_to_bs( $year, $month, $day );
+		$new_date = $nd_object->ad_to_bs( $year, $month, $day );
 
-		$date_details = ns_nepali_date_get_date_details( $new_date, $this->options['nsnd_language'] );
+		$date_details = $nd_object->get_date_details( $new_date, $this->options['nsnd_language'] );
 
-		return ns_nepali_date_get_formatted_date( $date_details, $this->options['nsnd_format'] );
+		return $nd_object->get_formatted_date( $date_details, $this->options['nsnd_format'] );
 	}
 
 	/**
