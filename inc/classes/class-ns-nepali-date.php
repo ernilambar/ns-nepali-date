@@ -114,9 +114,9 @@ class NS_Nepali_Date {
 
 		list( $year, $month, $day ) = explode( '-', $date_ymd );
 
-		$date_details = $nd_object->get_details_by_ad( $year, $month, $day, $this->options['nsnd_language'] );
+		$date_details = $nd_object->getDetails( $year, $month, $day, 'ad', $this->options['nsnd_language'] );
 
-		return $nd_object->get_formatted_date( $date_details, $this->options['nsnd_format'] );
+		return $nd_object->getFormattedDate( $date_details, $this->options['nsnd_format'] );
 	}
 
 	/**
