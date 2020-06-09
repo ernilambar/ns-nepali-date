@@ -6,7 +6,7 @@
         "dist": {
             "type": "path",
             "url": "/Users/nilambarsharma/Work/nepali-date",
-            "reference": "bbdeb91e565470371f0e7b2ee366b1007ac6f602"
+            "reference": "120beb7cbc90523d204246e58b20f1d83afccb42"
         },
         "require": {
             "php": ">=5.6"
@@ -18,12 +18,12 @@
         "installation-source": "dist",
         "autoload": {
             "psr-4": {
-                "ErNilambar\\NepaliDate\\": "src/"
+                "Nilambar\\NepaliDate\\": "src/"
             }
         },
         "autoload-dev": {
             "psr-4": {
-                "ErNilambar\\NepaliDate\\Test\\": "tests/"
+                "Nilambar\\NepaliDate\\Test\\": "tests/"
             }
         },
         "scripts": {

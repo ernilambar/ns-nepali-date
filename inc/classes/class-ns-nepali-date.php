@@ -5,7 +5,7 @@
  * @package NS_Nepali_Date
  */
 
-use ErNilambar\NepaliDate\NepaliDate;
+use Nilambar\NepaliDate\NepaliDate;
 
 /**
  * Plugin class.

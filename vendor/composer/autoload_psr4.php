@@ -6,5 +6,5 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'ErNilambar\\NepaliDate\\' => array($vendorDir . '/ernilambar/nepali-date/src'),
+    'Nilambar\\NepaliDate\\' => array($vendorDir . '/ernilambar/nepali-date/src'),
 );
