@@ -4,15 +4,21 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "da1695121c0e90362b2c55d8cef34051",
+    "content-hash": "aeeb6c8861f0495ecc5b3ac6f704e57d",
     "packages": [
         {
             "name": "ernilambar/nepali-date",
-            "version": "dev-master",
-            "dist": {
-                "type": "path",
-                "url": "/Users/nilambarsharma/Work/nepali-date",
+            "version": "1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ernilambar/nepali-date.git",
                 "reference": "120beb7cbc90523d204246e58b20f1d83afccb42"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ernilambar/nepali-date/zipball/120beb7cbc90523d204246e58b20f1d83afccb42",
+                "reference": "120beb7cbc90523d204246e58b20f1d83afccb42",
+                "shasum": ""
             },
             "require": {
                 "php": ">=5.6"
@@ -26,16 +32,7 @@
                     "Nilambar\\NepaliDate\\": "src/"
                 }
             },
-            "autoload-dev": {
-                "psr-4": {
-                    "Nilambar\\NepaliDate\\Test\\": "tests/"
-                }
-            },
-            "scripts": {
-                "test": [
-                    "phpunit"
-                ]
-            },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -52,21 +49,13 @@
             "keywords": [
                 "date"
             ],
-            "support": {
-                "issues": "https://github.com/ernilambar/nepali-date/issues"
-            },
-            "transport-options": {
-                "symlink": true,
-                "relative": false
-            }
+            "time": "2020-06-09T10:42:07+00:00"
         }
     ],
     "packages-dev": [],
     "aliases": [],
-    "minimum-stability": "dev",
-    "stability-flags": {
-        "ernilambar/nepali-date": 20
-    },
+    "minimum-stability": "stable",
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
