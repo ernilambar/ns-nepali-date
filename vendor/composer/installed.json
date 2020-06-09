@@ -1,0 +1,49 @@
+[
+    {
+        "name": "ernilambar/nepali-date",
+        "version": "1.0.0",
+        "version_normalized": "1.0.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/ernilambar/nepali-date.git",
+            "reference": "bbdeb91e565470371f0e7b2ee366b1007ac6f602"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/ernilambar/nepali-date/zipball/bbdeb91e565470371f0e7b2ee366b1007ac6f602",
+            "reference": "bbdeb91e565470371f0e7b2ee366b1007ac6f602",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.6"
+        },
+        "require-dev": {
+            "phpunit/phpunit": "^9"
+        },
+        "time": "2020-06-09T04:25:19+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "ErNilambar\\NepaliDate\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Nilambar Sharma",
+                "email": "nilambar@outlook.com",
+                "homepage": "https://www.nilambar.net",
+                "role": "Developer"
+            }
+        ],
+        "description": "Nepali Date",
+        "homepage": "https://github.com/ernilambar/nepali-date",
+        "keywords": [
+            "date"
+        ]
+    }
+]
