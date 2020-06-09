@@ -42,7 +42,7 @@ Nice, create an issue on the [Plugin Repo](https://github.com/ernilambar/ns-nepa
 
 ## Changelog 
 
-### 1.0.2 - 9 Jun 2020 
+### 1.0.3 - 9 Jun 2020 
 
 * Use composer package
 

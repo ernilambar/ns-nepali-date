@@ -1,7 +1,7 @@
 {
   "name": "ns-nepali-date",
-  "title": "NS Featured Posts",
-  "version": "1.0.0",
+  "title": "NS Nepali Date",
+  "version": "1.0.3",
   "license": "GPL-2.0+",
   "main_file": "ns-nepali-date.php",
   "scripts": {
