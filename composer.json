@@ -1,17 +1,5 @@
 {
-  "minimum-stability": "dev",
-  "repositories": [
-    {
-      "type": "path",
-      "url": "/Users/nilambarsharma/Work/nepali-date",
-      "options": {
-        "symlink": true
-      }
-    }
-  ],
   "require": {
-    "ernilambar/nepali-date": "@dev"
-  },
-  "require-dev": {
-  }
+    "ernilambar/nepali-date": "^1.0.0"
+  } 
 }
