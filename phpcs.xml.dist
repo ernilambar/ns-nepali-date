@@ -28,6 +28,9 @@
 	<!-- For CI, don't fail on warnings -->
 	<config name="ignore_warnings_on_exit" value="1"/>
 
+	<!-- Enforce core standards -->
+	<rule ref="WordPress-Core" />
+
 	<!-- Enforce doc standards -->
 	<rule ref="WordPress-Docs" />
 
