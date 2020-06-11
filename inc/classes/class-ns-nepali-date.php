@@ -231,12 +231,15 @@ class NS_Nepali_Date {
 	private static function get_blog_ids() {
 		global $wpdb;
 
-		// Get an array of blog ids.
-		$sql = "SELECT blog_id FROM $wpdb->blogs
-            WHERE archived = '0' AND spam = '0'
-            AND deleted = '0'";
+		$ids = array();
 
-		return $wpdb->get_col( $sql );
+		$output = $wpdb->get_results( "SELECT blog_id FROM $wpdb->blogs WHERE archived = '0' AND spam = '0' AND deleted = '0'", ARRAY_A );
+
+		if ( $output ) {
+			$ids = wp_list_pluck( $output, 'blog_id' );
+		}
+
+		return $ids;
 	}
 
 	/**
