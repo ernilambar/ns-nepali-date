@@ -7,7 +7,10 @@
   "scripts": {
     "start": "gulp",
     "build": "gulp build",
-    "deploy": "npm install && composer install --no-dev --no-scripts -o && gulp deploy"
+    "deploy": "gulp deploy",
+    "install": "composer install && npm install",
+    "update": "composer update && npm update",
+    "release": "npm install && composer install --no-dev --no-scripts -o && gulp deploy"
   },
   "repository": "github:ernilambar/ns-nepali-date",
   "devDependencies": {
