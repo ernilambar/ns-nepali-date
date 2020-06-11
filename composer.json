@@ -1,4 +1,22 @@
 {
+  "name": "ns-nepali-date",
+  "title": "NS Nepali Date",
+  "version": "1.0.4",
+  "license": "GPL-2.0-or-later",
+  "authors": [
+    {
+      "name": "Nilambar Sharma",
+      "email": "nilambar@outlook.com",
+      "homepage": "https://www.nilambar.net",
+      "role": "Developer"
+    }
+  ],
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/ernilmabar/ne-nepali-date"
+    }
+  ],
   "require": {
     "ernilambar/nepali-date": "^1.0.2"
   },

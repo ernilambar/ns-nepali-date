@@ -7,7 +7,7 @@ project.properties
 .settings*
 .idea
 
-# Grunt
+# Folders
 /node_modules/
 /deploy/
 /vendor/
