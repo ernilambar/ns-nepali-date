@@ -10,7 +10,7 @@ project.properties
 # Grunt
 /node_modules/
 /deploy/
-/build/
+/vendor/
 
 # Docs
 /docs/

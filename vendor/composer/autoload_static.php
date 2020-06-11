@@ -11,10 +11,6 @@ class ComposerStaticInit78604bdae1bc9233e6f9cb51bafaf412
         array (
             'Nilambar\\NepaliDate\\' => 20,
         ),
-        'D' => 
-        array (
-            'Dealerdirect\\Composer\\Plugin\\Installers\\PHPCodeSniffer\\' => 55,
-        ),
     );
 
     public static $prefixDirsPsr4 = array (
@@ -22,10 +18,11 @@ class ComposerStaticInit78604bdae1bc9233e6f9cb51bafaf412
         array (
             0 => __DIR__ . '/..' . '/ernilambar/nepali-date/src',
         ),
-        'Dealerdirect\\Composer\\Plugin\\Installers\\PHPCodeSniffer\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/dealerdirect/phpcodesniffer-composer-installer/src',
-        ),
+    );
+
+    public static $classMap = array (
+        'Nilambar\\NepaliDate\\NepaliCalendar' => __DIR__ . '/..' . '/ernilambar/nepali-date/src/NepaliCalendar.php',
+        'Nilambar\\NepaliDate\\NepaliDate' => __DIR__ . '/..' . '/ernilambar/nepali-date/src/NepaliDate.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
@@ -33,6 +30,7 @@ class ComposerStaticInit78604bdae1bc9233e6f9cb51bafaf412
         return \Closure::bind(function () use ($loader) {
             $loader->prefixLengthsPsr4 = ComposerStaticInit78604bdae1bc9233e6f9cb51bafaf412::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInit78604bdae1bc9233e6f9cb51bafaf412::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInit78604bdae1bc9233e6f9cb51bafaf412::$classMap;
 
         }, null, ClassLoader::class);
     }

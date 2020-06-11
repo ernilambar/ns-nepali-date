@@ -6,4 +6,6 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'Nilambar\\NepaliDate\\NepaliCalendar' => $vendorDir . '/ernilambar/nepali-date/src/NepaliCalendar.php',
+    'Nilambar\\NepaliDate\\NepaliDate' => $vendorDir . '/ernilambar/nepali-date/src/NepaliDate.php',
 );
