@@ -15,6 +15,7 @@
     ],
     "post-install-cmd": "@config-cs",
     "post-update-cmd": "@config-cs",
-    "lint": "\"vendor/bin/phpcs\" . "
+    "lint": "\"vendor/bin/phpcs\" . ",
+    "lint-fix": "\"vendor/bin/phpcbf\" . "
   }
 }
