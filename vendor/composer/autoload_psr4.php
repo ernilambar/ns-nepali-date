@@ -7,4 +7,5 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'Nilambar\\NepaliDate\\' => array($vendorDir . '/ernilambar/nepali-date/src'),
+    'Dealerdirect\\Composer\\Plugin\\Installers\\PHPCodeSniffer\\' => array($vendorDir . '/dealerdirect/phpcodesniffer-composer-installer/src'),
 );
