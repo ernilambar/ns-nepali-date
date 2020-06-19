@@ -3,6 +3,7 @@
   "title": "NS Nepali Date",
   "version": "1.0.4",
   "license": "GPL-2.0-or-later",
+  "minimum-stability" : "dev",
   "authors": [
     {
       "name": "Nilambar Sharma",
@@ -11,9 +12,18 @@
       "role": "Developer"
     }
   ],
+  "repositories": [
+    {
+      "type": "path",
+      "url": "/Users/nilambarsharma/Work/optioner",
+      "options": {
+        "symlink": true
+      }
+    }
+  ],
   "require": {
     "ernilambar/nepali-date": "^1.0.2",
-    "ernilambar/optioner": "^1.0"
+    "ernilambar/optioner": "dev-master"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^3.5",

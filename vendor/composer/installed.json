@@ -116,23 +116,16 @@
     },
     {
         "name": "ernilambar/optioner",
-        "version": "1.0.0",
-        "version_normalized": "1.0.0.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/ernilambar/optioner.git",
-            "reference": "f2d4d862b074f8e5f66264c6e2c5ec0dd4d0427c"
-        },
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
         "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/ernilambar/optioner/zipball/f2d4d862b074f8e5f66264c6e2c5ec0dd4d0427c",
-            "reference": "f2d4d862b074f8e5f66264c6e2c5ec0dd4d0427c",
-            "shasum": ""
+            "type": "path",
+            "url": "/Users/nilambarsharma/Work/optioner",
+            "reference": "f2d4d862b074f8e5f66264c6e2c5ec0dd4d0427c"
         },
         "require": {
             "php": ">=5.6"
         },
-        "time": "2020-06-18T12:04:07+00:00",
         "type": "library",
         "installation-source": "dist",
         "autoload": {
@@ -140,7 +133,6 @@
                 "Nilambar\\Optioner\\": "src/"
             }
         },
-        "notification-url": "https://packagist.org/downloads/",
         "license": [
             "MIT"
         ],
@@ -157,7 +149,14 @@
         "keywords": [
             "option",
             "wordpress"
-        ]
+        ],
+        "support": {
+            "issues": "https://github.com/ernilambar/optioner/issues"
+        },
+        "transport-options": {
+            "symlink": true,
+            "relative": false
+        }
     },
     {
         "name": "phpcompatibility/php-compatibility",
