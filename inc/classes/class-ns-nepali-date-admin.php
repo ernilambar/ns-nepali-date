@@ -73,11 +73,11 @@ class NS_Nepali_Date_Admin {
 
 		$obj->set_page(
 			array(
-				'page_title'     => esc_html__( 'NS Nepali Date', 'ns-nepali-date' ),
-				'menu_title'     => esc_html__( 'NS Nepali Date', 'ns-nepali-date' ),
-				'capability'     => 'manage_options',
-				'menu_slug'      => $this->menu_slug,
-				'option_slug'    => 'nsnd_plugin_options',
+				'page_title'  => esc_html__( 'NS Nepali Date', 'ns-nepali-date' ),
+				'menu_title'  => esc_html__( 'NS Nepali Date', 'ns-nepali-date' ),
+				'capability'  => 'manage_options',
+				'menu_slug'   => $this->menu_slug,
+				'option_slug' => 'nsnd_plugin_options',
 			)
 		);
 
@@ -125,8 +125,17 @@ class NS_Nepali_Date_Admin {
 		add_action( 'optioner_field_bottom_text', array( $this, 'customize_format' ), 10, 3 );
 	}
 
+	/**
+	 * Customize format field.
+	 *
+	 * @since 1.0.5
+	 *
+	 * @param string $field_id  Field ID.
+	 * @param string $page_slug Page slug.
+	 * @param array  $args Arguments.
+	 */
 	public function customize_format( $field_id, $page_slug, $args ) {
-		if ( 'nsnd_format' !== $field_id  ) {
+		if ( 'nsnd_format' !== $field_id ) {
 			return;
 		}
 
