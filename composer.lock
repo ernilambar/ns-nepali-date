@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "ernilambar/nepali-date",
-            "version": "1.0.3",
+            "version": "1.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ernilambar/nepali-date.git",
-                "reference": "fd72c247463160df8a322de10c9fbc58da6af150"
+                "reference": "b26d2b78dde90aa328c1303797b4a414f2c840bc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ernilambar/nepali-date/zipball/fd72c247463160df8a322de10c9fbc58da6af150",
-                "reference": "fd72c247463160df8a322de10c9fbc58da6af150",
+                "url": "https://api.github.com/repos/ernilambar/nepali-date/zipball/b26d2b78dde90aa328c1303797b4a414f2c840bc",
+                "reference": "b26d2b78dde90aa328c1303797b4a414f2c840bc",
                 "shasum": ""
             },
             "require": {
@@ -51,7 +51,7 @@
             "keywords": [
                 "date"
             ],
-            "time": "2020-06-11T06:02:17+00:00"
+            "time": "2020-06-19T16:04:36+00:00"
         },
         {
             "name": "ernilambar/optioner",
