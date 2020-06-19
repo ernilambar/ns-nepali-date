@@ -9,6 +9,7 @@ class ComposerStaticInit78604bdae1bc9233e6f9cb51bafaf412
     public static $prefixLengthsPsr4 = array (
         'N' => 
         array (
+            'Nilambar\\Optioner\\' => 18,
             'Nilambar\\NepaliDate\\' => 20,
         ),
         'D' => 
@@ -18,6 +19,10 @@ class ComposerStaticInit78604bdae1bc9233e6f9cb51bafaf412
     );
 
     public static $prefixDirsPsr4 = array (
+        'Nilambar\\Optioner\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/ernilambar/optioner/src',
+        ),
         'Nilambar\\NepaliDate\\' => 
         array (
             0 => __DIR__ . '/..' . '/ernilambar/nepali-date/src',

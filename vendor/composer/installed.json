@@ -115,6 +115,51 @@
         ]
     },
     {
+        "name": "ernilambar/optioner",
+        "version": "1.0.0",
+        "version_normalized": "1.0.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/ernilambar/optioner.git",
+            "reference": "f2d4d862b074f8e5f66264c6e2c5ec0dd4d0427c"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/ernilambar/optioner/zipball/f2d4d862b074f8e5f66264c6e2c5ec0dd4d0427c",
+            "reference": "f2d4d862b074f8e5f66264c6e2c5ec0dd4d0427c",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.6"
+        },
+        "time": "2020-06-18T12:04:07+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Nilambar\\Optioner\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Nilambar Sharma",
+                "email": "nilambar@outlook.com",
+                "homepage": "https://www.nilambar.net",
+                "role": "Developer"
+            }
+        ],
+        "description": "Minimal option framework for WordPress plugins",
+        "homepage": "https://github.com/ernilambar/optioner",
+        "keywords": [
+            "option",
+            "wordpress"
+        ]
+    },
+    {
         "name": "phpcompatibility/php-compatibility",
         "version": "9.3.5",
         "version_normalized": "9.3.5.0",
