@@ -14,7 +14,7 @@
   ],
   "require": {
     "ernilambar/nepali-date": "^1.0.3",
-    "ernilambar/optioner": "^1.0.1"
+    "ernilambar/optioner": "^1.0.4"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^3.5",

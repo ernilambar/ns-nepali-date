@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1a80d716bc49c0a1f3755cad188fdc08",
+    "content-hash": "0467d6b1b620dfc4a62f3dd1f5fa2458",
     "packages": [
         {
             "name": "ernilambar/nepali-date",
@@ -55,16 +55,16 @@
         },
         {
             "name": "ernilambar/optioner",
-            "version": "1.0.1",
+            "version": "1.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ernilambar/optioner.git",
-                "reference": "4f84ec6c7f1d50660e6501a1a17e6dc42705f684"
+                "reference": "44e38852f4eb9e4f5e9dc048ab2b956af68583f9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ernilambar/optioner/zipball/4f84ec6c7f1d50660e6501a1a17e6dc42705f684",
-                "reference": "4f84ec6c7f1d50660e6501a1a17e6dc42705f684",
+                "url": "https://api.github.com/repos/ernilambar/optioner/zipball/44e38852f4eb9e4f5e9dc048ab2b956af68583f9",
+                "reference": "44e38852f4eb9e4f5e9dc048ab2b956af68583f9",
                 "shasum": ""
             },
             "require": {
@@ -94,7 +94,7 @@
                 "option",
                 "wordpress"
             ],
-            "time": "2020-06-19T06:57:49+00:00"
+            "time": "2020-06-19T14:41:23+00:00"
         }
     ],
     "packages-dev": [
