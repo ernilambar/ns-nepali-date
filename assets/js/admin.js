@@ -7,7 +7,7 @@
 			var $this = $(this);
 			var $format = $this.data('format');
 
-			$this.parent().parent().parent().parent().find('.input-nsnd-format').val($format);
+			$this.parent().parent().parent().find('input[type=text]').val($format);
 		});
 
 		$('.btn-toggle-reference').on('click',function(e){
