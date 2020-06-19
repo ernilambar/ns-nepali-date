@@ -5,6 +5,8 @@
  * @package NS_Nepali_Date
  */
 
+use Nilambar\Optioner\Optioner;
+
 /**
  * Plugin admin class.
  *
@@ -72,6 +74,57 @@ class NS_Nepali_Date_Admin {
 
 		// Load assets.
 		add_action( 'admin_enqueue_scripts', array( $this, 'load_assets' ) );
+
+		$obj = new Optioner();
+
+		$obj->set_page(
+			array(
+				'page_title'     => esc_html__( 'NS Nepali Date', 'ns-nepali-date' ),
+				'menu_title'     => esc_html__( 'NS Nepali Date', 'ns-nepali-date' ),
+				'capability'     => 'manage_options',
+				'menu_slug'      => 'nsnd',
+				'option_slug'    => 'nsnd_plugin_options',
+				'top_level_menu' => true,
+			)
+		);
+
+		// Tab: nsnd_settings.
+		$obj->add_tab(
+			array(
+				'id'    => 'nsnd_settings',
+				'title' => esc_html__( 'Settings', 'ns-nepali-date' ),
+			)
+		);
+
+		// Field: nsnd_language.
+		$obj->add_field(
+			'nsnd_settings',
+			array(
+				'id'      => 'nsnd_language',
+				'type'    => 'select',
+				'title'   => esc_html__( 'Display Language', 'ns-nepali-date' ),
+				'default' => 'np',
+				'choices' => array(
+					'np' => esc_html__( 'Nepali', 'ns-nepali-date' ),
+					'en' => esc_html__( 'English', 'ns-nepali-date' ),
+				),
+			)
+		);
+
+		// Field: nsnd_format.
+		$obj->add_field(
+			'nsnd_settings',
+			array(
+				'id'      => 'nsnd_format',
+				'type'    => 'text',
+				'title'   => esc_html__( 'Date Format', 'ns-nepali-date' ),
+				'default' => 'd F Y',
+				'class'   => 'field-nsnd_format',
+			)
+		);
+
+		// Run now.
+		$obj->run();
 	}
 
 	/**
