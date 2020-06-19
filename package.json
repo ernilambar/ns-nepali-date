@@ -8,9 +8,9 @@
     "start": "gulp",
     "build": "gulp build",
     "deploy": "gulp deploy",
-    "install": "composer install && npm install",
-    "update": "composer update && npm update",
-    "release": "npm install && composer install --no-dev --no-scripts -o && gulp deploy"
+    "install-all": "composer install && yarn",
+    "update-all": "composer update && yarn upgrade",
+    "release": "yarn && composer install --no-dev --no-scripts -o && gulp deploy"
   },
   "repository": "github:ernilambar/ns-nepali-date",
   "devDependencies": {
