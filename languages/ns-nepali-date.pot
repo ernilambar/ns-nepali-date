@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NS Nepali Date 1.0.4\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/ns-nepali-date\n"
-"POT-Creation-Date: 2020-06-19 02:48:16+00:00\n"
+"POT-Creation-Date: 2020-06-19 04:38:12+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -17,36 +17,28 @@ msgstr ""
 msgid "NS Nepali Date"
 msgstr ""
 
-#: inc/classes/class-ns-nepali-date-admin.php:95
-#: inc/classes/class-ns-nepali-date-admin.php:315
+#: inc/classes/class-ns-nepali-date-admin.php:97
+#: inc/classes/class-ns-nepali-date-admin.php:243
 msgid "Settings"
 msgstr ""
 
-#: inc/classes/class-ns-nepali-date-admin.php:105
-#: inc/classes/class-ns-nepali-date-admin.php:149
+#: inc/classes/class-ns-nepali-date-admin.php:107
 msgid "Display Language"
 msgstr ""
 
-#: inc/classes/class-ns-nepali-date-admin.php:108
-#: inc/classes/class-ns-nepali-date-admin.php:186
+#: inc/classes/class-ns-nepali-date-admin.php:110
 msgid "Nepali"
 msgstr ""
 
-#: inc/classes/class-ns-nepali-date-admin.php:109
-#: inc/classes/class-ns-nepali-date-admin.php:187
+#: inc/classes/class-ns-nepali-date-admin.php:111
 msgid "English"
 msgstr ""
 
-#: inc/classes/class-ns-nepali-date-admin.php:120
-#: inc/classes/class-ns-nepali-date-admin.php:151
+#: inc/classes/class-ns-nepali-date-admin.php:122
 msgid "Date Format"
 msgstr ""
 
-#: inc/classes/class-ns-nepali-date-admin.php:147
-msgid "Plugin Settings"
-msgstr ""
-
-#: inc/classes/class-ns-nepali-date-admin.php:206
+#: inc/classes/class-ns-nepali-date-admin.php:148
 msgid "Examples:"
 msgstr ""
 
