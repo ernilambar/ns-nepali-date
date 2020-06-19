@@ -33,15 +33,6 @@ class NS_Nepali_Date_Admin {
 	protected $menu_slug = 'ns-nepali-date';
 
 	/**
-	 * Slug of the plugin screen.
-	 *
-	 * @since 1.0.0
-	 *
-	 * @var string
-	 */
-	protected $plugin_screen_hook_suffix = null;
-
-	/**
 	 * Plugin options.
 	 *
 	 * @since 1.0.0
