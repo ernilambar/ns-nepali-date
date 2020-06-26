@@ -1,15 +1,18 @@
 var fs = require('fs-extra');
 
-var dest_folder = 'deploy/ns-nepali-date/';
+var pkg = JSON.parse(fs.readFileSync('./package.json'));
 
-var files_list = [
-	'ns-nepali-date.php',
-	'README.md',
-	'assets',
-	'inc',
-	'languages',
-	'vendor',
-];
+var deploylist = '';
+
+if ( pkg.deploylist ) {
+	deploylist = pkg.deploylist;
+}
+
+if ( ! deploylist ) {
+	throw Error('"deploylist" is not set is "package.json".');
+}
+
+var dest_folder = 'deploy/' + pkg.name + '/';
 
 function depEmptyDirectory() {
 	fs.remove(dest_folder, err => {
@@ -32,7 +35,7 @@ function depCreateFolder() {
 }
 
 function copyFilesList() {
-	files_list.forEach(function(el ){
+	deploylist.forEach(function(el ){
 		fs.copy( el, dest_folder + el);
 	});
 }

@@ -2,9 +2,9 @@
 # This file is distributed under the GPL-2.0+.
 msgid ""
 msgstr ""
-"Project-Id-Version: NS Nepali Date 1.0.4\n"
+"Project-Id-Version: NS Nepali Date 1.0.6\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/ns-nepali-date\n"
-"POT-Creation-Date: 2020-06-19 04:40:12+00:00\n"
+"POT-Creation-Date: 2020-06-26 04:34:15+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -18,7 +18,7 @@ msgid "NS Nepali Date"
 msgstr ""
 
 #: inc/classes/class-ns-nepali-date-admin.php:88
-#: inc/classes/class-ns-nepali-date-admin.php:234
+#: inc/classes/class-ns-nepali-date-admin.php:247
 msgid "Settings"
 msgstr ""
 
@@ -38,7 +38,7 @@ msgstr ""
 msgid "Date Format"
 msgstr ""
 
-#: inc/classes/class-ns-nepali-date-admin.php:139
+#: inc/classes/class-ns-nepali-date-admin.php:152
 msgid "Examples:"
 msgstr ""
 

@@ -23,5 +23,13 @@
     "gulp-run": "^1.7.1",
     "gulp-zip": "^5.0.1",
     "node-wp-i18n": "^1.2.3"
-  }
+  },
+  "deploylist": [
+    "assets",
+    "inc",
+    "languages",
+    "vendor",
+    "ns-nepali-date.php",
+    "README.md"
+  ]
 }
