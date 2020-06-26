@@ -6,8 +6,11 @@
   "main_file": "ns-nepali-date.php",
   "scripts": {
     "start": "gulp",
-    "build": "gulp build",
+    "build": "yarn run build:pot",
     "clean": "del 'deploy/'",
+    "build:pot": "yarn run textdomain && yarn run language",
+    "textdomain": "wpi18n addtextdomain --textdomain=ns-nepali-date",
+    "language": "wpi18n makepot --domain-path=languages --exclude=vendor,deploy --textdomain=ns-nepali-date",
     "deploy": "yarn run clean && yarn run deploy:files && yarn run deploy:dirs",
     "deploy:files": "cpy 'ns-nepali-date.php' 'README.md' 'deploy/ns-nepali-date' ",
     "deploy:dirs": "cpy --parents 'assets/**' 'inc/**' 'languages/**' 'vendor/**' 'deploy/ns-nepali-date' ",
@@ -20,12 +23,7 @@
     "browser-sync": "^2.26.7",
     "cpy-cli": "^3.1.1",
     "del-cli": "^3.0.1",
-    "fs-extra": "^9.0.1",
     "gulp": "^4.0.2",
-    "gulp-load-plugins": "^1.6.0",
-    "gulp-plumber": "^1.2.1",
-    "gulp-run": "^1.7.1",
-    "gulp-zip": "^5.0.1",
     "node-wp-i18n": "^1.2.3"
   }
 }
