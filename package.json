@@ -16,7 +16,7 @@
     "release": "yarn && composer install --no-dev --no-scripts -o && yarn run deploy",
     "start": "browser-sync start --proxy 'http://staging.local/' --files \"assets/css/*.css, assets/js/*.js, **/*.php, !node_modules/**/*.html\" ",
     "textdomain": "wpi18n addtextdomain --textdomain=ns-nepali-date",
-    "update-all": "composer update && yarn upgrade",
+    "update-all": "composer update && yarn upgrade"
   },
   "devDependencies": {
     "browser-sync": "^2.24.7",
