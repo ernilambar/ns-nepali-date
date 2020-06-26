@@ -3,27 +3,25 @@
   "title": "NS Nepali Date",
   "version": "1.0.6",
   "license": "GPL-2.0-or-later",
-  "main_file": "ns-nepali-date.php",
-  "scripts": {
-    "start": "gulp",
-    "build": "yarn run build:pot",
-    "clean": "del 'deploy/'",
-    "build:pot": "yarn run textdomain && yarn run language",
-    "textdomain": "wpi18n addtextdomain --textdomain=ns-nepali-date",
-    "language": "wpi18n makepot --domain-path=languages --exclude=vendor,deploy --textdomain=ns-nepali-date",
-    "deploy": "yarn run clean && yarn run deploy:files && yarn run deploy:dirs",
-    "deploy:files": "cpy 'ns-nepali-date.php' 'README.md' 'deploy/ns-nepali-date' ",
-    "deploy:dirs": "cpy --parents 'assets/**' 'inc/**' 'languages/**' 'vendor/**' 'deploy/ns-nepali-date' ",
-    "install-all": "composer install && yarn",
-    "update-all": "composer update && yarn upgrade",
-    "release": "yarn && composer install --no-dev --no-scripts -o && gulp deploy"
-  },
   "repository": "github:ernilambar/ns-nepali-date",
+  "scripts": {
+    "build": "yarn run build:pot",
+    "build:pot": "yarn run textdomain && yarn run language",
+    "clean": "del 'deploy/'",
+    "deploy": "yarn run clean && yarn run deploy:files && yarn run deploy:dirs",
+    "deploy:dirs": "cpy --parents 'assets/**' 'inc/**' 'languages/**' 'vendor/**' 'deploy/ns-nepali-date' ",
+    "deploy:files": "cpy 'ns-nepali-date.php' 'README.md' 'deploy/ns-nepali-date' ",
+    "install-all": "composer install && yarn",
+    "language": "wpi18n makepot --domain-path=languages --exclude=vendor,deploy --textdomain=ns-nepali-date",
+    "release": "yarn && composer install --no-dev --no-scripts -o && yarn run deploy",
+    "start": "browser-sync start --proxy 'http://staging.local/' --files \"assets/css/*.css, assets/js/*.js, **/*.php, !node_modules/**/*.html\" ",
+    "textdomain": "wpi18n addtextdomain --textdomain=ns-nepali-date",
+    "update-all": "composer update && yarn upgrade",
+  },
   "devDependencies": {
-    "browser-sync": "^2.26.7",
+    "browser-sync": "^2.24.7",
     "cpy-cli": "^3.1.1",
     "del-cli": "^3.0.1",
-    "gulp": "^4.0.2",
     "node-wp-i18n": "^1.2.3"
   }
 }
