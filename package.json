@@ -7,7 +7,7 @@
   "scripts": {
     "start": "gulp",
     "build": "gulp build",
-    "deploy": "gulp deploy",
+    "deploy": "node ./bin/deploy.js",
     "install-all": "composer install && yarn",
     "update-all": "composer update && yarn upgrade",
     "release": "yarn && composer install --no-dev --no-scripts -o && gulp deploy"
@@ -16,6 +16,7 @@
   "devDependencies": {
     "browser-sync": "^2.26.7",
     "del": "^5.1.0",
+    "fs-extra": "^9.0.1",
     "gulp": "^4.0.2",
     "gulp-load-plugins": "^1.6.0",
     "gulp-plumber": "^1.2.1",
