@@ -7,7 +7,10 @@
   "scripts": {
     "start": "gulp",
     "build": "gulp build",
-    "deploy": "node ./bin/deploy.js",
+    "clean": "del 'deploy/'",
+    "deploy": "yarn run clean && yarn run deploy:files && yarn run deploy:dirs",
+    "deploy:files": "cpy 'ns-nepali-date.php' 'README.md' 'deploy/ns-nepali-date' ",
+    "deploy:dirs": "cpy --parents 'assets/**' 'inc/**' 'languages/**' 'vendor/**' 'deploy/ns-nepali-date' ",
     "install-all": "composer install && yarn",
     "update-all": "composer update && yarn upgrade",
     "release": "yarn && composer install --no-dev --no-scripts -o && gulp deploy"
@@ -15,7 +18,8 @@
   "repository": "github:ernilambar/ns-nepali-date",
   "devDependencies": {
     "browser-sync": "^2.26.7",
-    "del": "^5.1.0",
+    "cpy-cli": "^3.1.1",
+    "del-cli": "^3.0.1",
     "fs-extra": "^9.0.1",
     "gulp": "^4.0.2",
     "gulp-load-plugins": "^1.6.0",
@@ -23,13 +27,5 @@
     "gulp-run": "^1.7.1",
     "gulp-zip": "^5.0.1",
     "node-wp-i18n": "^1.2.3"
-  },
-  "deploylist": [
-    "assets",
-    "inc",
-    "languages",
-    "vendor",
-    "ns-nepali-date.php",
-    "README.md"
-  ]
+  }
 }
