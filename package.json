@@ -1,27 +1,26 @@
 {
   "name": "ns-nepali-date",
   "title": "NS Nepali Date",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "license": "GPL-2.0-or-later",
+	"main_file": "ns-nepali-date.php",
   "repository": "github:ernilambar/ns-nepali-date",
   "scripts": {
-    "build": "yarn run build:pot",
-    "build:pot": "yarn run textdomain && yarn run language",
-    "clean": "del 'deploy/'",
-    "deploy": "yarn run clean && yarn run deploy:files && yarn run deploy:dirs",
-    "deploy:dirs": "cpy --parents 'assets/**' 'inc/**' 'languages/**' 'vendor/**' 'deploy/ns-nepali-date' ",
-    "deploy:files": "cpy 'ns-nepali-date.php' 'README.md' 'deploy/ns-nepali-date' ",
-    "install-all": "composer install && yarn",
-    "language": "wpi18n makepot --domain-path=languages --exclude=vendor,deploy --textdomain=ns-nepali-date",
-    "release": "yarn && composer install --no-dev --no-scripts -o && yarn run deploy",
-    "start": "browser-sync start --proxy 'http://staging.local/' --files \"assets/css/*.css, assets/js/*.js, **/*.php, !node_modules/**/*.html\" ",
-    "textdomain": "wpi18n addtextdomain --textdomain=ns-nepali-date",
-    "update-all": "composer update && yarn upgrade"
+    "dev": "gulp",
+    "deploy": "gulp deploy",
+    "version": "grunt version",
+    "pot": "npm run textdomain && npm run language",
+    "language": "wpi18n makepot --domain-path=languages --exclude=vendor,deploy,node_modules",
+    "textdomain": "wpi18n addtextdomain --exclude=vendor,deploy,node_modules"
   },
   "devDependencies": {
-    "browser-sync": "^2.24.7",
-    "cpy-cli": "^3.1.1",
-    "del-cli": "^3.0.1",
-    "node-wp-i18n": "^1.2.3"
+    "browser-sync": "^2.27.10",
+    "del": "^6.1.1",
+    "dotenv": "^16.0.1",
+    "grunt": "^1.5.3",
+    "grunt-replace": "^2.0.2",
+    "gulp": "^4.0.2",
+    "gulp-zip": "^5.1.0",
+    "node-wp-i18n": "^1.2.6"
   }
 }
