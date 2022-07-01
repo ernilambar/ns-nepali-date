@@ -21,7 +21,7 @@ class NS_Nepali_Date {
 	 *
 	 * @var string
 	 */
-	const VERSION = '1.0.6';
+	const VERSION = NS_NEPALI_DATE_VERSION;
 
 	/**
 	 * Unique identifier.
@@ -30,7 +30,7 @@ class NS_Nepali_Date {
 	 *
 	 * @var string
 	 */
-	protected $plugin_slug = 'ns-nepali-date';
+	protected $plugin_slug = NS_NEPALI_DATE_SLUG;
 
 	/**
 	 * Plugin default options.
