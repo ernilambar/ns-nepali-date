@@ -1,26 +1,27 @@
 {
   "name": "ns-nepali-date",
   "title": "NS Nepali Date",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "license": "GPL-2.0-or-later",
-	"main_file": "ns-nepali-date.php",
-  "repository": "github:ernilambar/ns-nepali-date",
+  "main_file": "ns-nepali-date.php",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/ernilambar/ns-nepali-date.git"
+	},
   "scripts": {
-    "dev": "gulp",
-    "deploy": "gulp deploy",
-    "version": "grunt version",
-    "pot": "npm run textdomain && npm run language",
-    "language": "wpi18n makepot --domain-path=languages --exclude=vendor,deploy,node_modules",
-    "textdomain": "wpi18n addtextdomain --exclude=vendor,deploy,node_modules"
+		"preinstall": "npx only-allow pnpm",
+    "version": "easy-replace-in-files",
+    "pot": "wpi18n makepot --domain-path=languages --exclude=vendor,deploy,node_modules",
+    "textdomain": "wpi18n addtextdomain --exclude=vendor,deploy,node_modules",
+    "predeploy": "shx rm -rf vendor/ && composer install --no-dev --no-scripts -o",
+    "deploy": "shx rm -rf deploy/ && shx mkdir deploy && copy-files-from-to && cd deploy/ && cross-var shx mv temp $npm_package_name && cross-var bestzip ../$npm_package_name.zip * && cd .. && cross-var shx mv $npm_package_name.zip deploy/"
   },
   "devDependencies": {
-    "browser-sync": "^2.27.10",
-    "del": "^6.1.1",
-    "dotenv": "^16.0.1",
-    "grunt": "^1.5.3",
-    "grunt-replace": "^2.0.2",
-    "gulp": "^4.0.2",
-    "gulp-zip": "^5.1.0",
-    "node-wp-i18n": "^1.2.6"
+    "bestzip": "^2.2.1",
+    "copy-files-from-to": "^3.2.2",
+    "cross-var": "^1.1.0",
+    "easy-replace-in-files": "^1.0.2",
+    "node-wp-i18n": "^1.2.6",
+    "shx": "^0.3.4"
   }
 }
