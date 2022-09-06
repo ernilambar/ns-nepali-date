@@ -13,6 +13,6 @@
   ],
   "require": {
     "ernilambar/nepali-date": "^1.0.5",
-    "ernilambar/optioner": "^1.0.9"
+    "ernilambar/optioner": "^2.0"
   }
 }

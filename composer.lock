@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d151d03211368b48bdf998d14d8c4cfb",
+    "content-hash": "23fd0e45f55f4f90d29903184e2eeb1d",
     "packages": [
         {
             "name": "ernilambar/nepali-date",
@@ -59,20 +59,19 @@
         },
         {
             "name": "ernilambar/optioner",
-            "version": "1.0.9",
+            "version": "2.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ernilambar/optioner.git",
-                "reference": "c6959a2b5338e2744dc9b1d3c503f905eabc2be9"
+                "reference": "a9a2edfe3dfd671a0958caffde23805fc8affb65"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ernilambar/optioner/zipball/c6959a2b5338e2744dc9b1d3c503f905eabc2be9",
-                "reference": "c6959a2b5338e2744dc9b1d3c503f905eabc2be9",
+                "url": "https://api.github.com/repos/ernilambar/optioner/zipball/a9a2edfe3dfd671a0958caffde23805fc8affb65",
+                "reference": "a9a2edfe3dfd671a0958caffde23805fc8affb65",
                 "shasum": ""
             },
             "require": {
-                "kirki-framework/url-getter": "^1.0",
                 "php": ">=5.6"
             },
             "type": "library",
@@ -101,53 +100,9 @@
             ],
             "support": {
                 "issues": "https://github.com/ernilambar/optioner/issues",
-                "source": "https://github.com/ernilambar/optioner/tree/master"
+                "source": "https://github.com/ernilambar/optioner/tree/2.0.1"
             },
-            "time": "2020-07-01T02:03:06+00:00"
-        },
-        {
-            "name": "kirki-framework/url-getter",
-            "version": "v1.0.5",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/kirki-framework/url-getter.git",
-                "reference": "cfe7ea5b51c5e9b5e7d706ed56694f54a972fae2"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/kirki-framework/url-getter/zipball/cfe7ea5b51c5e9b5e7d706ed56694f54a972fae2",
-                "reference": "cfe7ea5b51c5e9b5e7d706ed56694f54a972fae2",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=7.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Kirki\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Kirki Framework",
-                    "email": "connect@mapsteps.com"
-                }
-            ],
-            "description": "Helper component to get the URL of a file in WordPress.",
-            "homepage": "https://kirki.org/",
-            "keywords": [
-                "wordpress"
-            ],
-            "support": {
-                "issues": "https://github.com/kirki-framework/url-getter/issues",
-                "source": "https://github.com/kirki-framework/url-getter/tree/v1.0.5"
-            },
-            "time": "2021-12-29T16:27:31+00:00"
+            "time": "2022-09-06T08:01:42+00:00"
         }
     ],
     "packages-dev": [],
