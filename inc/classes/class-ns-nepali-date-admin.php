@@ -69,6 +69,10 @@ class NS_Nepali_Date_Admin {
 		// Load assets.
 		add_action( 'admin_enqueue_scripts', array( $this, 'load_assets' ) );
 
+		// Blog posts AJAX callback.
+		add_action( 'wp_ajax_nopriv_nsnd_get_posts', array( $this, 'get_blog_posts_ajax_callback' ) );
+		add_action( 'wp_ajax_nsnd_get_posts', array( $this, 'get_blog_posts_ajax_callback' ) );
+
 		$obj = new Optioner();
 
 		$obj->set_page(
@@ -259,7 +263,7 @@ class NS_Nepali_Date_Admin {
 	 */
 	public function load_assets( $hook ) {
 		if ( 'settings_page_ns-nepali-date' === $hook ) {
-			wp_enqueue_script( 'ns-nepali-date-admin', NS_NEPALI_DATE_URL . '/assets/js/admin.js', array(), $this->version, false );
+			wp_enqueue_script( 'ns-nepali-date-admin', NS_NEPALI_DATE_URL . '/assets/js/admin.js', array( 'jquery' ), $this->version, true );
 			wp_enqueue_style( 'ns-nepali-date-admin', NS_NEPALI_DATE_URL . '/assets/css/admin.css', array(), $this->version );
 		}
 	}
@@ -272,41 +276,70 @@ class NS_Nepali_Date_Admin {
 	public function render_sidebar() {
 		?>
 		<div class="sidebox">
-			<h3 class="box-heading">Help &amp; Support</h3>
-			<div class="box-content">
-				<ul>
-					<li><strong>Questions, bugs, or great ideas?</strong></li>
-					<li><a href="https://github.com/ernilambar/ns-nepali-date/issues" target="_blank">Create issue in the repo</a></li>
-				</ul>
+			<h3 class="sidebox-heading">Help &amp; Support</h3>
+			<div class="sidebox-content">
+				<p><strong>Questions, bugs, or great ideas?</strong></p>
+				<p><a href="https://github.com/ernilambar/ns-nepali-date/issues" target="_blank">Create issue in the repo</a></p>
 			</div>
 		</div><!-- .sidebox -->
+
 		<div class="sidebox">
-			<h3 class="box-heading">My Blog</h3>
-			<div class="box-content">
-				<?php
-				$rss = fetch_feed( 'https://www.nilambar.net/category/wordpress/feed' );
-
-				$maxitems = 0;
-
-				$rss_items = array();
-
-				if ( ! is_wp_error( $rss ) ) {
-					$maxitems  = $rss->get_item_quantity( 5 );
-					$rss_items = $rss->get_items( 0, $maxitems );
-				}
-				?>
-
-				<?php if ( ! empty( $rss_items ) ) : ?>
-
-					<ul>
-						<?php foreach ( $rss_items as $item ) : ?>
-							<li><a href="<?php echo esc_url( $item->get_permalink() ); ?>" target="_blank"><?php echo esc_html( $item->get_title() ); ?></a></li>
-						<?php endforeach; ?>
-					</ul>
-
-				<?php endif; ?>
+			<h3 class="sidebox-heading">Recent Blog Posts</h3>
+			<div class="sidebox-content">
+				<div class="ns-blog-list"></div>
 			</div>
 		</div><!-- .sidebox -->
 		<?php
+	}
+
+	public function get_blog_posts_ajax_callback() {
+		$output = array();
+
+		$posts = $this->get_blog_feed_items();
+
+		if ( ! empty( $posts ) ) {
+			$output = $posts;
+		}
+
+		if ( ! empty( $output ) ) {
+			wp_send_json_success( $output, 200 );
+		} else {
+			wp_send_json_error( $output, 404 );
+		}
+	}
+
+	/**
+	 * Return blog posts list.
+	 *
+	 * @since 1.0.0
+	 *
+	 * @return array Posts list.
+	 */
+	function get_blog_feed_items() {
+		$output = array();
+
+		$rss = fetch_feed( 'https://www.nilambar.net/category/wordpress/feed' );
+
+		$maxitems = 0;
+
+		$rss_items = array();
+
+		if ( ! is_wp_error( $rss ) ) {
+			$maxitems  = $rss->get_item_quantity( 5 );
+			$rss_items = $rss->get_items( 0, $maxitems );
+		}
+
+		if ( ! empty( $rss_items ) ) {
+			foreach ( $rss_items as $item ) {
+				$feed_item = array();
+
+				$feed_item['title'] = $item->get_title();
+				$feed_item['url']   = $item->get_permalink();
+
+				$output[] = $feed_item;
+			}
+		}
+
+		return $output;
 	}
 }
