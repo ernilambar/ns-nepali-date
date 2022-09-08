@@ -2,7 +2,16 @@
   "name": "ernilambar/ns-nepali-date",
   "title": "NS Nepali Date",
   "license": "GPL-2.0-or-later",
-  "minimum-stability" : "stable",
+  "minimum-stability" : "dev",
+  "repositories": [
+    {
+      "type": "path",
+      "url": "/Users/nilambarsharma/Work/wp-git/optioner",
+      "options": {
+        "symlink": true
+      }
+    }
+  ],
   "authors": [
     {
       "name": "Nilambar Sharma",
@@ -13,6 +22,6 @@
   ],
   "require": {
     "ernilambar/nepali-date": "^1.0.5",
-    "ernilambar/optioner": "^2.0"
+    "ernilambar/optioner": "*"
   }
 }

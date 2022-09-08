@@ -53,7 +53,7 @@ class NS_Nepali_Date_Admin {
 		$this->version     = $plugin->get_version();
 
 		// Initialize custom hooks.
-		add_action( 'init', array( $this, 'initialize_hooks' ) );
+		add_action( 'optioner_admin_init', array( $this, 'initialize_hooks' ) );
 	}
 
 	/**

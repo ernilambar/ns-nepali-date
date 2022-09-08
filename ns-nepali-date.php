@@ -27,9 +27,13 @@ define( 'NS_NEPALI_DATE_BASENAME', basename( dirname( __FILE__ ) ) );
 define( 'NS_NEPALI_DATE_DIR', rtrim( plugin_dir_path( __FILE__ ), '/' ) );
 define( 'NS_NEPALI_DATE_URL', rtrim( plugin_dir_url( __FILE__ ), '/' ) );
 
-define( 'OPTIONER_DIR', NS_NEPALI_DATE_DIR . '/vendor/ernilambar/optioner' );
-define( 'OPTIONER_URL', NS_NEPALI_DATE_URL . '/vendor/ernilambar/optioner' );
+if ( ! defined( 'OPTIONER_DIR' ) ) {
+	define( 'OPTIONER_DIR', NS_NEPALI_DATE_DIR . '/vendor/ernilambar/optioner' );
+}
 
+if ( ! defined( 'OPTIONER_URL' ) ) {
+	define( 'OPTIONER_URL', NS_NEPALI_DATE_URL . '/vendor/ernilambar/optioner' );
+}
 
 if ( file_exists( NS_NEPALI_DATE_DIR . '/vendor/autoload.php' ) ) {
 	require_once NS_NEPALI_DATE_DIR . '/vendor/autoload.php';

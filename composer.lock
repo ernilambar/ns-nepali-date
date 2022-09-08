@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "23fd0e45f55f4f90d29903184e2eeb1d",
+    "content-hash": "63e9af5671f366c5e6d02a9ab718b217",
     "packages": [
         {
             "name": "ernilambar/nepali-date",
@@ -59,28 +59,16 @@
         },
         {
             "name": "ernilambar/optioner",
-            "version": "2.0.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/ernilambar/optioner.git",
-                "reference": "a9a2edfe3dfd671a0958caffde23805fc8affb65"
-            },
+            "version": "dev-fix/class",
             "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/ernilambar/optioner/zipball/a9a2edfe3dfd671a0958caffde23805fc8affb65",
-                "reference": "a9a2edfe3dfd671a0958caffde23805fc8affb65",
-                "shasum": ""
+                "type": "path",
+                "url": "/Users/nilambarsharma/Work/wp-git/optioner",
+                "reference": "05d7cd13fe369295e59fefbd8588b7b7293d6dad"
             },
             "require": {
                 "php": ">=5.6"
             },
             "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Nilambar\\Optioner\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -99,15 +87,17 @@
                 "wordpress"
             ],
             "support": {
-                "issues": "https://github.com/ernilambar/optioner/issues",
-                "source": "https://github.com/ernilambar/optioner/tree/2.0.1"
+                "issues": "https://github.com/ernilambar/optioner/issues"
             },
-            "time": "2022-09-06T08:01:42+00:00"
+            "transport-options": {
+                "symlink": true,
+                "relative": false
+            }
         }
     ],
     "packages-dev": [],
     "aliases": [],
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
