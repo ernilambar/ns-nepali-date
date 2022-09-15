@@ -10,7 +10,6 @@
         "!*.lockb",
         "!*.yaml",
         "!*.js",
-        "!languages/**/*",
         "!src/**/*",
         "!sass/**/*",
         "!scripts/**/*",
