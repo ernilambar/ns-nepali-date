@@ -2,7 +2,7 @@
 
 ( function( $ ) {
 	$.fn.blogPosts = function( options ) {
-		var settings = $.extend( {
+		const settings = $.extend( {
 			api: '',
 			action: 'blog_posts',
 			loading_text: 'Loading',
@@ -14,7 +14,7 @@
 		}
 
 		function generateList( data ) {
-			var output = '';
+			let output = '';
 
 			if ( 0 === data.length ) {
 				return output;
@@ -28,27 +28,27 @@
 		}
 
 		return this.each( function() {
-			if ( $(this).length < 1 ) {
+			if ( $( this ).length < 1 ) {
 				return;
 			}
 
-			var $wrapper = $( this );
+			const $wrapper = $( this );
 
 			$.ajax( {
 				url: settings.api,
 				type: 'GET',
 				dataType: 'json',
 				data: { action: settings.action },
-				beforeSend: function() {
+				beforeSend() {
 					$wrapper.html( settings.loading_text );
 				},
-				complete: function( jqXHR ) {
-					var response = JSON.parse( jqXHR.responseText );
+				complete( jqXHR ) {
+					const response = JSON.parse( jqXHR.responseText );
 
 					$wrapper.html( '' );
 
 					if ( true === response.success ) {
-						var listMarkup = generateList( response.data );
+						const listMarkup = generateList( response.data );
 						$wrapper.append( listMarkup );
 					}
 				},
@@ -56,23 +56,23 @@
 		} );
 	};
 
-	$(document).ready(function() {
+	$( document ).ready( function() {
 		$( '.ns-blog-list' ).blogPosts( {
 			api: ajaxurl,
-			action: 'nsnd_get_posts',
+			action: 'nsnd_nsbl_get_posts',
 		} );
 
-		$('.format-list a').on('click',function(e){
+		$( '.format-list a' ).on( 'click', function( e ) {
 			e.preventDefault();
-			var $this = $(this);
-			var $format = $this.data('format');
+			const $this = $( this );
+			const $format = $this.data( 'format' );
 
-			$this.parent().parent().parent().find('input[type=text]').val($format);
-		});
+			$this.parent().parent().parent().find( 'input[type=text]' ).val( $format );
+		} );
 
-		$('.btn-toggle-reference').on('click',function(e){
+		$( '.btn-toggle-reference' ).on( 'click', function( e ) {
 			e.preventDefault();
-			$('.format-reference-content').fadeToggle();
-		});
-	});
-})( jQuery );
+			$( '.format-reference-content' ).fadeToggle();
+		} );
+	} );
+}( jQuery ) );
