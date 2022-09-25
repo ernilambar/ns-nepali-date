@@ -94,22 +94,23 @@ class Options {
 	 *
 	 * @since 1.0.0
 	 */
-	public function render_sidebar() {
-		?>
-		<div class="sidebox">
-			<h3 class="sidebox-heading">Help &amp; Support</h3>
-			<div class="sidebox-content">
-				<p><strong>Questions, bugs, or great ideas?</strong></p>
-				<p><a href="https://github.com/ernilambar/ns-nepali-date/issues" target="_blank">Create issue in the repo</a></p>
-			</div>
-		</div><!-- .sidebox -->
+	public function render_sidebar( $object ) {
+		$object->render_sidebar_box(
+			array(
+				'title'   => 'Help &amp; Support',
+				'icon'    => 'dashicons-editor-help',
+				'content' => '<h4>Questions, bugs or great ideas?</h4>
+				<p><a href="https://github.com/ernilambar/ns-nepali-date/issues" target="_blank">Create issue in the repo</a></p>',
+			),
+			$object
+		);
 
-		<div class="sidebox">
-			<h3 class="sidebox-heading">Recent Blog Posts</h3>
-			<div class="sidebox-content">
-				<div class="ns-blog-list"></div>
-			</div>
-		</div><!-- .sidebox -->
-		<?php
+		$object->render_sidebar_box(
+			array(
+				'title'   => 'Recent Blog Posts',
+				'content' => '<div class="ns-blog-list"></div>',
+			),
+			$object
+		);
 	}
 }
