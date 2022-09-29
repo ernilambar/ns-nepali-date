@@ -36,11 +36,27 @@ class Options {
 		$obj->set_page(
 			array(
 				'page_title'     => esc_html__( 'NS Nepali Date', 'ns-nepali-date' ),
+				'page_subtitle'  => sprintf( esc_html__( 'Version: %s', 'ns-nepali-date' ), NS_NEPALI_DATE_VERSION ),
 				'menu_title'     => esc_html__( 'NS Nepali Date', 'ns-nepali-date' ),
 				'capability'     => 'manage_options',
 				'menu_slug'      => 'ns-nepali-date',
 				'option_slug'    => 'nsnd_plugin_options',
 				'top_level_menu' => false,
+			)
+		);
+
+		$obj->set_quick_links(
+			array(
+				array(
+					'text' => 'Plugin Page',
+					'url'  => 'https://github.com/ernilambar/ns-nepali-date/',
+					'type' => 'primary',
+				),
+				array(
+					'text' => 'Get Support',
+					'url'  => 'https://github.com/ernilambar/ns-nepali-date/issues',
+					'type' => 'secondary',
+				),
 			)
 		);
 
