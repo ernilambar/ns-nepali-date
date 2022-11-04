@@ -20,8 +20,9 @@ const babel = require( 'gulp-babel' );
 // Sourcemaps.
 const sourcemaps = require( 'gulp-sourcemaps' );
 
-// Autoprefixer.
-const autoprefixer = require( 'gulp-autoprefixer' );
+// Postcss.
+const postcss = require( 'gulp-postcss' );
+const postcssPresetEnv = require('postcss-preset-env');
 
 // Browser sync.
 const browserSync = require( 'browser-sync' ).create();
@@ -30,7 +31,9 @@ gulp.task( 'styles', function() {
 	return gulp.src( [ rootPath + 'src/sass/*.scss' ] )
 		.pipe( development( sourcemaps.init() ) )
 		.pipe( sass.sync().on( 'error', sass.logError ) )
-		.pipe( autoprefixer() )
+		.pipe( postcss([
+			postcssPresetEnv()
+		]) )
 		.pipe( development( sourcemaps.write( '.' ) ) )
 		.pipe( gulp.dest( 'assets/css' ) );
 } );
