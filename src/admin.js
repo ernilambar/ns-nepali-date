@@ -1,13 +1,18 @@
-'use strict';
+import './sass/admin.scss';
+
+import 'jquery';
 
 ( function( $ ) {
 	$.fn.blogPosts = function( options ) {
-		const settings = $.extend( {
-			api: '',
-			action: 'blog_posts',
-			loading_text: 'Loading',
-			list_type: 'ul',
-		}, options );
+		const settings = $.extend(
+			{
+				api: '',
+				action: 'blog_posts',
+				loading_text: 'Loading',
+				list_type: 'ul',
+			},
+			options
+		);
 
 		if ( '' === settings.api ) {
 			return this;
@@ -21,7 +26,12 @@
 			}
 
 			data.forEach( function( item ) {
-				output += '<li><a href="' + item.url + '" target="_blank">' + item.title + '</a></li>';
+				output +=
+					'<li><a href="' +
+					item.url +
+					'" target="_blank">' +
+					item.title +
+					'</a></li>';
 			} );
 
 			return $( '<' + settings.list_type + '/>' ).append( output );
@@ -67,7 +77,12 @@
 			const $this = $( this );
 			const $format = $this.data( 'format' );
 
-			$this.parent().parent().parent().find( 'input[type=text]' ).val( $format );
+			$this
+				.parent()
+				.parent()
+				.parent()
+				.find( 'input[type=text]' )
+				.val( $format );
 		} );
 
 		$( '.btn-toggle-reference' ).on( 'click', function( e ) {

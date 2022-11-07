@@ -1,7 +1,7 @@
 {
   "name": "ns-nepali-date",
   "title": "NS Nepali Date",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "license": "GPL-2.0-or-later",
   "main_file": "ns-nepali-date.php",
   "repository": {
@@ -9,47 +9,27 @@
     "url": "https://github.com/ernilambar/ns-nepali-date.git"
   },
   "scripts": {
-    "dev": "gulp",
-    "build": "gulp build",
-    "prod": "gulp build --env production",
-    "eslint": "eslint --quiet .",
-    "eslint:fix": "eslint --quiet --fix .",
-    "format": "prettier --write \"src/**/*.scss\"",
+    "dev": "wp-scripts start",
+    "build": "wp-scripts build",
+		"lint:css": "wp-scripts lint-style 'src/**/*.{css,scss}'",
+		"lint:css:fix": "wp-scripts lint-style 'src/**/*.{css,scss}' --fix",
+    "lint:js": "wp-scripts lint-js ./src webpack.config.js",
+    "lint:js:fix": "wp-scripts lint-js ./src webpack.config.js --fix",
     "preinstall": "npx only-allow pnpm",
     "version": "easy-replace-in-files",
     "pot": "wpi18n makepot --domain-path=languages --exclude=vendor,deploy,node_modules",
     "textdomain": "wpi18n addtextdomain --exclude=vendor,deploy,node_modules",
-    "predeploy": "shx rm -rf vendor/ && composer install --no-dev --no-scripts -o && shx rm -rf assets/ && pnpm run prod",
+    "predeploy": "shx rm -rf vendor/ && composer install --no-dev --no-scripts -o && shx rm -rf build/ && pnpm run build",
     "deploy": "shx rm -rf deploy/ && shx mkdir deploy && copy-files-from-to && cd deploy/ && cross-var shx mv temp $npm_package_name && cross-var bestzip ../$npm_package_name.zip * && cd .. && cross-var shx mv $npm_package_name.zip deploy/"
   },
   "browserslist": "> 1%, not dead",
   "devDependencies": {
-    "@babel/core": "^7.19.6",
-    "@babel/preset-env": "^7.19.4",
-    "@wordpress/eslint-plugin": "^12.9.0",
-    "@wordpress/prettier-config": "^1.4.0",
+    "@wordpress/scripts": "^24.5.0",
     "bestzip": "^2.2.1",
-    "browser-sync": "^2.27.10",
     "copy-files-from-to": "^3.2.2",
     "cross-var": "^1.1.0",
-    "dotenv": "^16.0.3",
     "easy-replace-in-files": "^1.0.3",
-    "eslint": "^8.26.0",
-    "gulp": "^4.0.2",
-    "gulp-babel": "^8.0.0",
-    "gulp-environments": "^1.0.1",
-    "gulp-postcss": "^9.0.1",
-    "gulp-sass": "^5.1.0",
-    "gulp-sourcemaps": "^3.0.0",
     "node-wp-i18n": "^1.2.6",
-    "postcss": "^8.4.18",
-    "postcss-preset-env": "^7.8.2",
-    "prettier": "^2.7.1",
-    "sass": "^1.56.0",
     "shx": "^0.3.4"
-  },
-  "prettier": "@wordpress/prettier-config",
-  "dependencies": {
-    "build": "^0.1.4"
   }
 }

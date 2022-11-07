@@ -15,16 +15,18 @@
     "ernilambar/nepali-date": "^1.0",
     "ernilambar/optioner": "^2.0"
   },
-	"autoload" : {
-		"psr-4": {
-			"NSNepaliDate\\": "app/"
-		}
-	},
+  "autoload": {
+    "psr-4": {
+      "NSNepaliDate\\": "app/"
+    }
+  },
   "scripts": {
-    "pc:info": "phpcs -i",
-    "pc:config": "phpcs --config-show",
-    "lint": "phpcs .",
-    "lint:fix": "phpcbf ."
+    "pc:info": "@php ./vendor/squizlabs/php_codesniffer/bin/phpcs -i",
+    "pc:config": "@php ./vendor/squizlabs/php_codesniffer/bin/phpcs --config-show",
+    "lint": "@php ./vendor/squizlabs/php_codesniffer/bin/phpcs --report-full --report-summary .",
+    "lint:fix": "@php ./vendor/squizlabs/php_codesniffer/bin/phpcbf --report-full --report-summary .",
+    "lint:error": "@lint -n",
+    "compat": "@php ./vendor/squizlabs/php_codesniffer/bin/phpcs --standard=.phpcompat.xml.dist --report-full --report-summary ."
   },
   "require-dev": {
     "dealerdirect/phpcodesniffer-composer-installer": "^0.7.2",
