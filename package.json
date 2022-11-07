@@ -1,7 +1,7 @@
 {
   "name": "ns-nepali-date",
   "title": "NS Nepali Date",
-  "version": "1.0.12",
+  "version": "1.0.13",
   "license": "GPL-2.0-or-later",
   "main_file": "ns-nepali-date.php",
   "repository": {
