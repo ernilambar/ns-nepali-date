@@ -36,6 +36,7 @@ class Options {
 		$obj->set_page(
 			array(
 				'page_title'     => esc_html__( 'NS Nepali Date', 'ns-nepali-date' ),
+				/* translators: %s: version. */
 				'page_subtitle'  => sprintf( esc_html__( 'Version: %s', 'ns-nepali-date' ), NS_NEPALI_DATE_VERSION ),
 				'menu_title'     => esc_html__( 'NS Nepali Date', 'ns-nepali-date' ),
 				'capability'     => 'manage_options',
@@ -109,6 +110,8 @@ class Options {
 	 * Render admin sidebar.
 	 *
 	 * @since 1.0.0
+	 *
+	 * @param Welcom $object Welcome object.
 	 */
 	public function render_sidebar( $object ) {
 		$object->render_sidebar_box(

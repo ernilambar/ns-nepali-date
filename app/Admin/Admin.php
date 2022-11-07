@@ -155,9 +155,19 @@ class Admin {
 			return;
 		}
 
-		wp_enqueue_style( 'ns-nepali-date-admin', NS_NEPALI_DATE_URL . '/assets/css/admin.css', array(), NS_NEPALI_DATE_VERSION );
+		$deps_file = NS_NEPALI_DATE_DIR . '/build/admin.asset.php';
 
-		wp_enqueue_script( 'ns-nepali-date-admin', NS_NEPALI_DATE_URL . '/assets/js/admin.js', array( 'jquery' ), NS_NEPALI_DATE_VERSION, true );
+		$dependency = array();
+
+		if ( file_exists( $deps_file ) ) {
+			$deps_file  = require $deps_file;
+			$dependency = $deps_file['dependencies'];
+			$version    = $deps_file['version'];
+		}
+
+		wp_enqueue_style( 'ns-nepali-date-admin', NS_NEPALI_DATE_URL . '/build/admin.css', array(), $version );
+
+		wp_enqueue_script( 'ns-nepali-date-admin', NS_NEPALI_DATE_URL . '/build/admin.js', $dependency, $version, true );
 	}
 
 	/**
