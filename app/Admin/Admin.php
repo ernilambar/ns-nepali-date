@@ -23,7 +23,7 @@ class Admin {
 	 */
 	public function register() {
 		add_filter( 'plugin_action_links_' . NS_NEPALI_DATE_BASE_FILENAME, array( $this, 'customize_plugin_action_links' ) );
-		add_action( 'optioner_field_bottom_text', array( $this, 'customize_format' ), 10, 3 );
+		add_action( 'optioner_field_bottom_text', array( $this, 'customize_format' ), 10, 1 );
 		add_action( 'admin_enqueue_scripts', array( $this, 'load_assets' ) );
 		add_action( 'wp_ajax_nopriv_nsnd_nsbl_get_posts', array( $this, 'get_posts_ajax_callback' ) );
 		add_action( 'wp_ajax_nsnd_nsbl_get_posts', array( $this, 'get_posts_ajax_callback' ) );
@@ -61,10 +61,8 @@ class Admin {
 	 * @since 1.0.0
 	 *
 	 * @param string $field_id  Field ID.
-	 * @param string $page_slug Page slug.
-	 * @param array  $args Arguments.
 	 */
-	public function customize_format( $field_id, $page_slug, $args ) {
+	public function customize_format( $field_id ) {
 		if ( 'nsnd_format' !== $field_id ) {
 			return;
 		}
