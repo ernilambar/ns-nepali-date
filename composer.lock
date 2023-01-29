@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7d795b8283977cb3c22aa399231b7949",
+    "content-hash": "a124e299ce9fe0b0cd9fc67bae97c08e",
     "packages": [
         {
             "name": "ernilambar/nepali-date",

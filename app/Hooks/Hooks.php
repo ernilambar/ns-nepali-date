@@ -33,8 +33,8 @@ class Hooks {
 	 */
 	public function hooks() {
 		if ( ! is_admin() ) {
-			add_filter( 'get_the_date', array( $this, 'replace_date' ), 10, 3 );
-			add_filter( 'get_the_time', array( $this, 'replace_date' ), 10, 3 );
+			add_filter( 'get_the_date', array( $this, 'replace_date' ), 10, 1 );
+			add_filter( 'get_the_time', array( $this, 'replace_date' ), 10, 1 );
 		}
 	}
 
@@ -43,11 +43,9 @@ class Hooks {
 	 *
 	 * @since 1.0.0
 	 *
-	 * @param string      $date    The formatted date.
-	 * @param string      $format PHP date format.
-	 * @param int|WP_Post $post   The post object or ID.
+	 * @param string $date The formatted date.
 	 */
-	public function replace_date( $date, $format, $post ) {
+	public function replace_date( $date ) {
 		$nd_object = new NepaliDate();
 
 		$nsnd_language = Option::get( 'nsnd_language' );

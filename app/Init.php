@@ -17,6 +17,8 @@ final class Init {
 	/**
 	 * Store all the classes inside an array.
 	 *
+	 * @since 1.0.0
+	 *
 	 * @return array Full list of classes.
 	 */
 	public static function get_services() {
@@ -30,12 +32,15 @@ final class Init {
 	}
 
 	/**
-	 * Loop through the classes, initialize them,
-	 * and call the register() method if it exists
+	 * Register services.
+	 *
+	 * Loop through the classes, initialize them, and call the register() method if it exists.
+	 *
+	 * @since 1.0.0
 	 */
 	public static function register_services() {
-		foreach ( self::get_services() as $class ) {
-			$service = self::instantiate( $class );
+		foreach ( self::get_services() as $class_name ) {
+			$service = self::instantiate( $class_name );
 			if ( method_exists( $service, 'register' ) ) {
 				$service->register();
 			}
@@ -45,12 +50,12 @@ final class Init {
 	/**
 	 * Initialize the class.
 	 *
-	 * @param  class $class    Class from the services array.
-	 * @return class instance  New instance of the class.
+	 * @since 1.0.0
+	 *
+	 * @param  class $class_name Class from the services array.
+	 * @return class instance   New instance of the class.
 	 */
-	private static function instantiate( $class ) {
-		$service = new $class();
-
-		return $service;
+	private static function instantiate( $class_name ) {
+		return new $class_name();
 	}
 }

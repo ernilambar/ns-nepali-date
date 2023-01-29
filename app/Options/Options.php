@@ -111,25 +111,25 @@ class Options {
 	 *
 	 * @since 1.0.0
 	 *
-	 * @param Welcom $object Welcome object.
+	 * @param Welcom $welcome_object Welcome object.
 	 */
-	public function render_sidebar( $object ) {
-		$object->render_sidebar_box(
+	public function render_sidebar( $welcome_object ) {
+		$welcome_object->render_sidebar_box(
 			array(
 				'title'   => 'Help &amp; Support',
 				'icon'    => 'dashicons-editor-help',
 				'content' => '<h4>Questions, bugs or great ideas?</h4>
 				<p><a href="https://github.com/ernilambar/ns-nepali-date/issues" target="_blank">Create issue in the repo</a></p>',
 			),
-			$object
+			$welcome_object
 		);
 
-		$object->render_sidebar_box(
+		$welcome_object->render_sidebar_box(
 			array(
 				'title'   => 'Recent Blog Posts',
 				'content' => '<div class="ns-blog-list"></div>',
 			),
-			$object
+			$welcome_object
 		);
 	}
 }

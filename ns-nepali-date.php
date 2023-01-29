@@ -22,7 +22,7 @@ if ( ! defined( 'WPINC' ) ) {
 
 define( 'NS_NEPALI_DATE_VERSION', '1.0.14' );
 define( 'NS_NEPALI_DATE_SLUG', 'ns-nepali-date' );
-define( 'NS_NEPALI_DATE_BASENAME', basename( dirname( __FILE__ ) ) );
+define( 'NS_NEPALI_DATE_BASENAME', basename( __DIR__ ) );
 define( 'NS_NEPALI_DATE_BASE_FILENAME', plugin_basename( __FILE__ ) );
 define( 'NS_NEPALI_DATE_DIR', rtrim( plugin_dir_path( __FILE__ ), '/' ) );
 define( 'NS_NEPALI_DATE_URL', rtrim( plugin_dir_url( __FILE__ ), '/' ) );
@@ -38,5 +38,5 @@ if ( class_exists( 'NSNepaliDate\Init' ) ) {
 	\NSNepaliDate\Init::register_services();
 }
 
-$nsndUpdateChecker = \YahnisElsts\PluginUpdateChecker\v5\PucFactory::buildUpdateChecker( 'https://github.com/ernilambar/ns-nepali-date', __FILE__, NS_NEPALI_DATE_SLUG );
-$nsndUpdateChecker->getVcsApi()->enableReleaseAssets();
+$nsnd_update_checker = \YahnisElsts\PluginUpdateChecker\v5\PucFactory::buildUpdateChecker( 'https://github.com/ernilambar/ns-nepali-date', __FILE__, NS_NEPALI_DATE_SLUG );
+$nsnd_update_checker->getVcsApi()->enableReleaseAssets();
