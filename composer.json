@@ -13,8 +13,8 @@
   ],
   "require": {
     "ernilambar/nepali-date": "^1.0",
-    "ernilambar/optioner": "^2.0",
-    "yahnis-elsts/plugin-update-checker": "^5.0"
+    "yahnis-elsts/plugin-update-checker": "^5.0",
+    "ernilambar/optioner": "^2.0"
   },
   "autoload": {
     "psr-4": {
