@@ -18,6 +18,7 @@
     "lint:js:fix": "wp-scripts lint-js ./src webpack.config.js --fix",
     "preinstall": "npx only-allow pnpm",
     "version": "easy-replace-in-files",
+    "release": "dotenv release-it -- --no-git --no-npm --no-increment",
     "pot": "wpi18n makepot --domain-path=languages --exclude=vendor,deploy,node_modules",
     "textdomain": "wpi18n addtextdomain --exclude=vendor,deploy,node_modules",
     "predeploy": "shx rm -rf vendor/ && composer install --no-dev --no-scripts -o && shx rm -rf build/ && pnpm run build",
@@ -25,15 +26,17 @@
   },
   "browserslist": "> 1%, not dead",
   "devDependencies": {
-    "@wordpress/scripts": "^25.4.0",
+    "@wordpress/scripts": "^26.4.0",
     "bestzip": "^2.2.1",
-    "browser-sync": "^2.27.11",
+    "browser-sync": "^2.29.3",
     "browser-sync-webpack-plugin": "^2.3.0",
-    "copy-files-from-to": "^3.8.0",
+    "copy-files-from-to": "^3.9.0",
     "cross-var": "^1.1.0",
     "dotenv": "^16.0.3",
+    "dotenv-cli": "^7.2.1",
     "easy-replace-in-files": "^1.0.3",
     "node-wp-i18n": "^1.2.7",
+    "release-it": "^15.10.3",
     "shx": "^0.3.4"
   }
 }
