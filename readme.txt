@@ -4,7 +4,7 @@ Contributors: rabmalin
 Requires at least: 4.9
 Requires PHP: 5.6
 Tested up to: 6.1
-Stable tag: 1.0.15
+Stable tag: 1.0.16
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -41,9 +41,11 @@ Nice, create an issue on the [Plugin Repo](https://github.com/ernilambar/ns-nepa
 
 == Changelog ==
 
+= 1.0.16 - 27 May 2023 =
+* Implement release
+
 = 1.0.15 - 20 Feb 2023 =
 * WP 6.2 compatibility
-
 
 = 1.0.14 - 29 Jan 2023 =
 * Fix PHP 8 compat issues
