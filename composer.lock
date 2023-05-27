@@ -59,27 +59,22 @@
         },
         {
             "name": "ernilambar/optioner",
-            "version": "2.0.10",
+            "version": "2.0.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ernilambar/optioner.git",
-                "reference": "5679fc0cf0fae2035db8824dae7d9f9b85c5e286"
+                "reference": "b7ef22ac76b49afd6c2229451ff5909f794463f5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ernilambar/optioner/zipball/5679fc0cf0fae2035db8824dae7d9f9b85c5e286",
-                "reference": "5679fc0cf0fae2035db8824dae7d9f9b85c5e286",
+                "url": "https://api.github.com/repos/ernilambar/optioner/zipball/b7ef22ac76b49afd6c2229451ff5909f794463f5",
+                "reference": "b7ef22ac76b49afd6c2229451ff5909f794463f5",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.6"
             },
             "type": "library",
-            "autoload": {
-                "files": [
-                    "optioner.php"
-                ]
-            },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
@@ -100,9 +95,9 @@
             ],
             "support": {
                 "issues": "https://github.com/ernilambar/optioner/issues",
-                "source": "https://github.com/ernilambar/optioner/tree/2.0.10"
+                "source": "https://github.com/ernilambar/optioner/tree/2.0.9"
             },
-            "time": "2023-05-27T08:05:22+00:00"
+            "time": "2023-04-30T09:04:01+00:00"
         },
         {
             "name": "yahnis-elsts/plugin-update-checker",

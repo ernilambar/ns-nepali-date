@@ -30,6 +30,7 @@ define( 'NS_NEPALI_DATE_URL', rtrim( plugin_dir_url( __FILE__ ), '/' ) );
 // Include autoload.
 if ( file_exists( NS_NEPALI_DATE_DIR . '/vendor/autoload.php' ) ) {
 	require_once NS_NEPALI_DATE_DIR . '/vendor/autoload.php';
+	require_once NS_NEPALI_DATE_DIR . '/vendor/ernilambar/optioner/optioner.php';
 	require_once NS_NEPALI_DATE_DIR . '/vendor/yahnis-elsts/plugin-update-checker/plugin-update-checker.php';
 }
 
