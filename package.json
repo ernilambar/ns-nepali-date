@@ -1,7 +1,7 @@
 {
   "name": "ns-nepali-date",
   "title": "NS Nepali Date",
-  "version": "1.0.15",
+  "version": "1.0.16",
   "license": "GPL-2.0-or-later",
   "main_file": "ns-nepali-date.php",
   "repository": {
@@ -24,9 +24,19 @@
     "predeploy": "shx rm -rf vendor/ && composer install --no-dev --no-scripts -o && shx rm -rf build/ && pnpm run build",
     "deploy": "shx rm -rf deploy/ && shx mkdir deploy && copy-files-from-to && cd deploy/ && cross-var shx mv temp $npm_package_name && cross-var bestzip ../$npm_package_name.zip * && cd .. && cross-var shx mv $npm_package_name.zip deploy/"
   },
+  "release-it": {
+    "github": {
+      "release": true,
+      "changelog": false,
+      "releaseName": "${version}",
+      "assets": [
+        "deploy/*.zip"
+      ]
+    }
+  },
   "browserslist": "> 1%, not dead",
   "devDependencies": {
-    "@wordpress/scripts": "^26.4.0",
+    "@wordpress/scripts": "^26.5.0",
     "bestzip": "^2.2.1",
     "browser-sync": "^2.29.3",
     "browser-sync-webpack-plugin": "^2.3.0",
