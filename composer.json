@@ -2,7 +2,6 @@
   "name": "ernilambar/ns-nepali-date",
   "title": "NS Nepali Date",
   "license": "GPL-2.0-or-later",
-  "minimum-stability": "stable",
   "authors": [
     {
       "name": "Nilambar Sharma",
@@ -30,9 +29,9 @@
     "compat": "@php ./vendor/squizlabs/php_codesniffer/bin/phpcs --standard=.phpcompat.xml.dist --report-full --report-summary ."
   },
   "require-dev": {
-    "dealerdirect/phpcodesniffer-composer-installer": "^0.7.2",
+    "dealerdirect/phpcodesniffer-composer-installer": "^1.0",
     "phpcompatibility/phpcompatibility-wp": "^2.1",
-    "wp-coding-standards/wpcs": "*"
+    "wp-coding-standards/wpcs": "dev-develop"
   },
   "config": {
     "allow-plugins": {
