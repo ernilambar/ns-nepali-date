@@ -1,7 +1,7 @@
 {
   "name": "ns-nepali-date",
   "title": "NS Nepali Date",
-  "version": "1.0.16",
+  "version": "1.0.17",
   "license": "GPL-2.0-or-later",
   "main_file": "ns-nepali-date.php",
   "repository": {
@@ -18,8 +18,8 @@
     "lint:js:fix": "wp-scripts lint-js ./src webpack.config.js --fix",
     "preinstall": "npx only-allow pnpm",
     "version": "easy-replace-in-files",
-		"prerelease": "pnpm run deploy",
-    "release": "dotenv release-it -- --no-git --no-npm --no-increment",
+    "prerelease": "pnpm run deploy",
+    "release": "release-it --no-git --no-npm --no-increment",
     "pot": "wpi18n makepot --domain-path=languages --exclude=vendor,deploy,node_modules",
     "textdomain": "wpi18n addtextdomain --exclude=vendor,deploy,node_modules",
     "predeploy": "shx rm -rf vendor/ && composer install --no-dev --no-scripts -o && shx rm -rf build/ && pnpm run build",
@@ -44,7 +44,6 @@
     "copy-files-from-to": "^3.9.0",
     "cross-var": "^1.1.0",
     "dotenv": "^16.0.3",
-    "dotenv-cli": "^7.2.1",
     "easy-replace-in-files": "^1.0.3",
     "node-wp-i18n": "^1.2.7",
     "release-it": "^15.10.3",
