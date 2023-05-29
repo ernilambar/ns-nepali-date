@@ -3,8 +3,8 @@
 Contributors: rabmalin
 Requires at least: 4.9
 Requires PHP: 5.6
-Tested up to: 6.1
-Stable tag: 1.0.16
+Tested up to: 6.2
+Stable tag: 1.0.17
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -40,6 +40,9 @@ Nice, create an issue on the [Plugin Repo](https://github.com/ernilambar/ns-nepa
 1. Settings
 
 == Changelog ==
+
+= 1.0.17 - 29 May 2023 =
+* Fix release settings
 
 = 1.0.16 - 27 May 2023 =
 * Implement release
