@@ -16,6 +16,7 @@
     "lint:css:fix": "wp-scripts lint-style 'src/**/*.{css,scss}' --fix",
     "lint:js": "wp-scripts lint-js ./src webpack.config.js",
     "lint:js:fix": "wp-scripts lint-js ./src webpack.config.js --fix",
+		"prepare": "composer install",
     "preinstall": "npx only-allow pnpm",
     "version": "easy-replace-in-files",
     "prerelease": "pnpm run deploy",
@@ -23,8 +24,19 @@
     "pot": "wpi18n makepot --domain-path=languages --exclude=vendor,deploy,node_modules",
     "textdomain": "wpi18n addtextdomain --exclude=vendor,deploy,node_modules",
     "predeploy": "shx rm -rf vendor/ && composer install --no-dev --no-scripts -o && shx rm -rf build/ && pnpm run build",
-    "deploy": "shx rm -rf deploy/ && shx mkdir deploy && copy-files-from-to --silent && cd deploy/ && cross-var shx mv temp $npm_package_name && cross-var bestzip ../$npm_package_name.zip * && cd .. && cross-var shx mv $npm_package_name.zip deploy/"
+    "deploy": "packtor"
   },
+	"packtor" : {
+		"files" : [
+			"**/*",
+			"!*.js",
+			"!*.json",
+			"!*.lock",
+			"!*.yaml",
+			"!src/**/*",
+			"!vendor/yahnis-elsts/plugin-update-checker/languages/*"
+		]
+	},
   "release-it": {
     "github": {
       "release": true,
@@ -38,14 +50,12 @@
   "browserslist": "> 1%, not dead",
   "devDependencies": {
     "@wordpress/scripts": "^26.5.0",
-    "bestzip": "^2.2.1",
     "browser-sync": "^2.29.3",
     "browser-sync-webpack-plugin": "^2.3.0",
-    "copy-files-from-to": "^3.9.0",
-    "cross-var": "^1.1.0",
-    "dotenv": "^16.0.3",
+    "dotenv": "^16.1.3",
     "easy-replace-in-files": "^1.0.3",
     "node-wp-i18n": "^1.2.7",
+    "packtor": "^1.0.0",
     "release-it": "^15.10.3",
     "shx": "^0.3.4"
   }
