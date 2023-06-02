@@ -16,27 +16,30 @@
     "lint:css:fix": "wp-scripts lint-style 'src/**/*.{css,scss}' --fix",
     "lint:js": "wp-scripts lint-js ./src webpack.config.js",
     "lint:js:fix": "wp-scripts lint-js ./src webpack.config.js --fix",
-		"prepare": "composer install",
+    "lint:json:fix": "wp-scripts format composer.json package.json",
+    "prepare": "composer install",
     "preinstall": "npx only-allow pnpm",
     "version": "easy-replace-in-files",
     "prerelease": "pnpm run deploy",
     "release": "release-it --no-git --no-npm --no-increment",
+    "td": "wpi18n addtextdomain --exclude=vendor,deploy,node_modules",
     "pot": "wpi18n makepot --domain-path=languages --exclude=vendor,deploy,node_modules",
-    "textdomain": "wpi18n addtextdomain --exclude=vendor,deploy,node_modules",
-    "predeploy": "shx rm -rf vendor/ && composer install --no-dev --no-scripts -o && shx rm -rf build/ && pnpm run build",
+    "ready:build": "shx rm -rf build/ && pnpm run build",
+    "ready:vendor": "shx rm -rf vendor/ && composer install --no-dev --no-scripts -o",
+    "predeploy": "pnpm run ready:vendor && pnpm run ready:build",
     "deploy": "packtor"
   },
-	"packtor" : {
-		"files" : [
-			"**/*",
-			"!*.js",
-			"!*.json",
-			"!*.lock",
-			"!*.yaml",
-			"!src/**/*",
-			"!vendor/yahnis-elsts/plugin-update-checker/languages/*"
-		]
-	},
+  "packtor": {
+    "files": [
+      "**/*",
+      "!*.js",
+      "!*.json",
+      "!*.lock",
+      "!*.yaml",
+      "!src/**/*",
+      "!vendor/yahnis-elsts/plugin-update-checker/languages/*"
+    ]
+  },
   "release-it": {
     "github": {
       "release": true,
@@ -55,8 +58,8 @@
     "dotenv": "^16.1.3",
     "easy-replace-in-files": "^1.0.3",
     "node-wp-i18n": "^1.2.7",
-    "packtor": "^1.0.0",
-    "release-it": "^15.10.3",
+    "packtor": "^1.0.2",
+    "release-it": "^15.10.5",
     "shx": "^0.3.4"
   }
 }
