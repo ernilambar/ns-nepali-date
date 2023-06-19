@@ -1,30 +1,52 @@
 import './sass/admin.scss';
 
-import 'jquery';
+const nsndToggler = () => {
+	const btnToggleReference = document.querySelector(
+		'.btn-toggle-reference'
+	);
+	const formatReferenceContent = document.querySelector(
+		'.format-reference-content'
+	);
 
-( function ( $ ) {
-	$( document ).ready( function () {
-		$( '.ns-blog-list' ).blogPosts( {
-			api: ajaxurl,
-			action: 'nsnd_nsbl_get_posts',
-		} );
-
-		$( '.format-list a' ).on( 'click', function ( e ) {
+	if ( btnToggleReference && formatReferenceContent ) {
+		btnToggleReference.addEventListener( 'click', function ( e ) {
 			e.preventDefault();
-			const $this = $( this );
-			const $format = $this.data( 'format' );
 
-			$this
-				.parent()
-				.parent()
-				.parent()
-				.find( 'input[type=text]' )
-				.val( $format );
+			formatReferenceContent.classList.toggle( 'active' );
 		} );
+	}
+};
 
-		$( '.btn-toggle-reference' ).on( 'click', function ( e ) {
+const nsndCopier = () => {
+	const links = document.querySelectorAll( '.format-list a' );
+
+	if ( ! links ) {
+		return;
+	}
+
+	for ( const link of links ) {
+		link.addEventListener( 'click', function ( e ) {
 			e.preventDefault();
-			$( '.format-reference-content' ).fadeToggle();
+
+			const el = e.currentTarget;
+
+			const format = el.getAttribute( 'data-format' );
+
+			const parent = el.closest( 'td' );
+
+			const input = parent.querySelector( 'input' );
+
+			if ( input ) {
+				input.value = format;
+			}
 		} );
-	} );
-} )( jQuery );
+	}
+};
+
+document.addEventListener( 'DOMContentLoaded', function () {
+	// Toggler.
+	nsndToggler();
+
+	// Copier.
+	nsndCopier();
+} );

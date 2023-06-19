@@ -16,7 +16,7 @@ module.exports = {
 		...defaultConfig.plugins,
 		new BrowserSyncPlugin( {
 			proxy: process.env.DEV_SERVER_URL,
-			open: true,
+			open: false,
 			files: [
 				{
 					match: [ '**/*.php' ],

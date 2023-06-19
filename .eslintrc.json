@@ -21,7 +21,7 @@
   "rules": {
 		"import/no-unresolved": "off",
     "no-unused-vars": "warn",
-    "no-console": "error",
+    "no-console": "warn",
     "no-alert": "error",
     "vars-on-top": "warn"
   }
