@@ -71,5 +71,8 @@
 		"ready:vendor": "shx rm -rf vendor/ && composer install --no-dev --no-scripts -o",
 		"predeploy": "pnpm run ready:vendor && pnpm run ready:build",
 		"deploy": "packtor"
+	},
+	"dependencies": {
+		"spinno": "^1.0.3"
 	}
 }

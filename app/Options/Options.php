@@ -127,7 +127,7 @@ class Options {
 		$welcome_object->render_sidebar_box(
 			array(
 				'title'   => 'Recent Blog Posts',
-				'content' => '<div class="ns-blog-list"></div>',
+				'content' => '<div id="nsnd-posts-app"></div>',
 			),
 			$welcome_object
 		);
