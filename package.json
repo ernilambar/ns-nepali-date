@@ -1,7 +1,7 @@
 {
 	"name": "ns-nepali-date",
 	"title": "NS Nepali Date",
-	"version": "1.0.17",
+	"version": "1.0.18",
 	"description": "NS Nepali Date",
 	"author": "Nilambar Sharma",
 	"license": "GPL-2.0-or-later",
@@ -40,6 +40,9 @@
 		}
 	},
 	"browserslist": "> 1%, not dead",
+	"dependencies": {
+		"spinno": "^1.0.3"
+	},
 	"devDependencies": {
 		"@wordpress/scripts": "^26.5.0",
 		"browser-sync": "^2.29.3",
@@ -58,10 +61,9 @@
 		"lint:css:fix": "wp-scripts lint-style 'src/**/*.{css,scss}' --fix",
 		"lint:js": "wp-scripts lint-js ./src webpack.config.js",
 		"lint:js:fix": "wp-scripts lint-js ./src webpack.config.js --fix",
-		"lint:json:fix": "wp-scripts format composer.json package.json",
+		"lint:json:fix": "wp-scripts format *.json",
 		"lint:pkg": "wp-scripts lint-pkg-json",
 		"prepare": "composer install",
-		"preinstall": "npx only-allow pnpm",
 		"version": "easy-replace-in-files",
 		"prerelease": "pnpm run deploy",
 		"release": "release-it --no-git --no-npm --no-increment",
@@ -71,8 +73,5 @@
 		"ready:vendor": "shx rm -rf vendor/ && composer install --no-dev --no-scripts -o",
 		"predeploy": "pnpm run ready:vendor && pnpm run ready:build",
 		"deploy": "packtor"
-	},
-	"dependencies": {
-		"spinno": "^1.0.3"
 	}
 }

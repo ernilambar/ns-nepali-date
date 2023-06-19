@@ -180,7 +180,7 @@ class Admin {
 		}
 
 		$data = array(
-			'ajax_url' => admin_url( 'admin-ajax.php' ),
+			'ajax_url'     => admin_url( 'admin-ajax.php' ),
 			'posts_action' => 'nsnd_nsbl_get_posts',
 		);
 
