@@ -9,7 +9,7 @@ const nsndToggler = () => {
 	);
 
 	if ( btnToggleReference && formatReferenceContent ) {
-		btnToggleReference.addEventListener( 'click', function ( e ) {
+		btnToggleReference.addEventListener( 'click', function( e ) {
 			e.preventDefault();
 
 			formatReferenceContent.classList.toggle( 'active' );
@@ -25,7 +25,7 @@ const nsndCopier = () => {
 	}
 
 	for ( const link of links ) {
-		link.addEventListener( 'click', function ( e ) {
+		link.addEventListener( 'click', function( e ) {
 			e.preventDefault();
 
 			const el = e.currentTarget;
@@ -43,7 +43,7 @@ const nsndCopier = () => {
 	}
 };
 
-document.addEventListener( 'DOMContentLoaded', function () {
+document.addEventListener( 'DOMContentLoaded', function() {
 	// Toggler.
 	nsndToggler();
 

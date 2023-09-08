@@ -1,81 +1,66 @@
 {
-	"name": "ns-nepali-date",
-	"title": "NS Nepali Date",
-	"version": "1.0.18",
-	"description": "NS Nepali Date",
-	"author": "Nilambar Sharma",
-	"license": "GPL-2.0-or-later",
-	"main_file": "ns-nepali-date.php",
-	"keywords": [
-		"wordpress",
-		"wordpress-plugin"
-	],
-	"homepage": "https://github.com/ernilambar/ns-nepali-date",
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/ernilambar/ns-nepali-date.git"
-	},
-	"bugs": {
-		"url": "https://github.com/ernilambar/ns-nepali-date/issues"
-	},
-	"packtor": {
-		"files": [
-			"**/*",
-			"!*.js",
-			"!*.json",
-			"!*.lock",
-			"!*.yaml",
-			"!src/**/*",
-			"!vendor/yahnis-elsts/plugin-update-checker/languages/*"
-		]
-	},
-	"release-it": {
-		"github": {
-			"release": true,
-			"changelog": false,
-			"releaseName": "${version}",
-			"assets": [
-				"deploy/*.zip"
-			]
-		}
-	},
-	"browserslist": [
-		"extends @wordpress/browserslist-config"
-	],
-	"dependencies": {
-		"spinno": "^1.0.3"
-	},
-	"devDependencies": {
-		"@wordpress/browserslist-config": "^5.18.0",
-		"@wordpress/scripts": "^26.6.0",
-		"browser-sync": "^2.29.3",
-		"browser-sync-webpack-plugin": "^2.3.0",
-		"browserslist": "^4.21.9",
-		"dotenv": "^16.3.1",
-		"easy-replace-in-files": "^1.0.3",
-		"node-wp-i18n": "^1.2.7",
-		"packtor": "^1.0.2",
-		"release-it": "^15.11.0",
-		"shx": "^0.3.4"
-	},
-	"scripts": {
-		"dev": "wp-scripts start",
-		"build": "wp-scripts build",
-		"lint:css": "wp-scripts lint-style 'src/**/*.{css,scss}'",
-		"lint:css:fix": "wp-scripts lint-style 'src/**/*.{css,scss}' --fix",
-		"lint:js": "wp-scripts lint-js ./src webpack.config.js",
-		"lint:js:fix": "wp-scripts lint-js ./src webpack.config.js --fix",
-		"lint:json:fix": "wp-scripts format *.json",
-		"lint:pkg": "wp-scripts lint-pkg-json",
-		"prepare": "composer install",
-		"version": "easy-replace-in-files",
-		"prerelease": "pnpm run deploy",
-		"release": "release-it --no-git --no-npm --no-increment",
-		"td": "wpi18n addtextdomain --exclude=vendor,deploy,node_modules",
-		"pot": "wpi18n makepot --domain-path=languages --exclude=vendor,deploy,node_modules",
-		"ready:build": "shx rm -rf build/ && pnpm run build",
-		"ready:vendor": "shx rm -rf vendor/ && composer install --no-dev --no-scripts -o",
-		"predeploy": "pnpm run ready:vendor && pnpm run ready:build",
-		"deploy": "packtor"
-	}
+  "name": "ns-nepali-date",
+  "title": "NS Nepali Date",
+  "version": "1.0.18",
+  "description": "NS Nepali Date",
+  "author": "Nilambar Sharma",
+  "license": "GPL-2.0-or-later",
+  "main_file": "ns-nepali-date.php",
+  "keywords": [
+    "wordpress",
+    "wordpress-plugin"
+  ],
+  "homepage": "https://github.com/ernilambar/ns-nepali-date",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ernilambar/ns-nepali-date.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ernilambar/ns-nepali-date/issues"
+  },
+  "packtor": {
+    "files": [
+      "**/*",
+      "!*.js",
+      "!*.json",
+      "!*.lock",
+      "!*.lockb",
+      "!*.yaml",
+      "!src/**/*",
+      "!vendor/yahnis-elsts/plugin-update-checker/languages/*"
+    ]
+  },
+  "browserslist": "> 1%, not dead",
+  "dependencies": {
+    "spinno": "^1.0.3"
+  },
+  "devDependencies": {
+    "@wordpress/scripts": "^26.6.0",
+    "browser-sync": "^2.29.3",
+    "browser-sync-webpack-plugin": "^2.3.0",
+    "browserslist": "^4.21.9",
+    "dotenv": "^16.3.1",
+    "easy-replace-in-files": "^1.0.3",
+    "node-wp-i18n": "^1.2.7",
+    "packtor": "^1.0.2",
+    "shx": "^0.3.4"
+  },
+  "scripts": {
+    "dev": "wp-scripts start",
+    "build": "wp-scripts build",
+    "lint:css": "wp-scripts lint-style 'src/**/*.{css,scss}'",
+    "lint:css:fix": "wp-scripts lint-style 'src/**/*.{css,scss}' --fix",
+    "lint:js": "wp-scripts lint-js ./src *.js",
+    "lint:js:fix": "wp-scripts lint-js ./src *.js --fix",
+    "lint:json:fix": "wp-scripts format *.json",
+    "lint:pkg": "wp-scripts lint-pkg-json",
+    "prepare": "composer install",
+    "version": "easy-replace-in-files",
+    "td": "wpi18n addtextdomain --exclude=vendor,deploy,node_modules",
+    "pot": "wpi18n makepot --domain-path=languages --exclude=vendor,deploy,node_modules",
+    "ready:build": "shx rm -rf build/ && bun run build",
+    "ready:vendor": "shx rm -rf vendor/ && composer install --no-dev --no-scripts -o",
+    "predeploy": "bun run ready:vendor && bun run ready:build",
+    "deploy": "packtor"
+  }
 }
