@@ -152,18 +152,10 @@ class Admin {
 		}
 
 		// Admin.
-		$deps_file = NS_NEPALI_DATE_DIR . '/build/admin.asset.php';
+		$hash_path = NS_NEPALI_DATE_DIR . '/build/hash.php';
+		$hash      = file_exists( $hash_path ) ? require $hash_path : filemtime( __FILE__ );
 
-		$dependency = array();
-		$version = '1.0.0';
-
-		if ( file_exists( $deps_file ) ) {
-			$deps_file  = require $deps_file;
-			$dependency = $deps_file['dependencies'];
-			$version    = $deps_file['version'];
-		}
-
-		wp_enqueue_style( 'ns-nepali-date-admin', NS_NEPALI_DATE_URL . '/build/admin.css', array(), $version );
-		wp_enqueue_script( 'ns-nepali-date-admin', NS_NEPALI_DATE_URL . '/build/admin.js', $dependency, $version, true );
+		wp_enqueue_style( 'ns-nepali-date-admin', NS_NEPALI_DATE_URL . '/build/admin.css', array(), $hash );
+		wp_enqueue_script( 'ns-nepali-date-admin', NS_NEPALI_DATE_URL . '/build/admin.js', array(), $hash, true );
 	}
 }
