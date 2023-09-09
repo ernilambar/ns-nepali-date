@@ -25,8 +25,6 @@ class Admin {
 		add_filter( 'plugin_action_links_' . NS_NEPALI_DATE_BASE_FILENAME, array( $this, 'customize_plugin_action_links' ) );
 		add_action( 'optioner_field_bottom_text', array( $this, 'customize_format' ), 10, 1 );
 		add_action( 'admin_enqueue_scripts', array( $this, 'load_assets' ) );
-		add_action( 'wp_ajax_nopriv_nsnd_nsbl_get_posts', array( $this, 'get_posts_ajax_callback' ) );
-		add_action( 'wp_ajax_nsnd_nsbl_get_posts', array( $this, 'get_posts_ajax_callback' ) );
 	}
 
 	/**
@@ -157,6 +155,7 @@ class Admin {
 		$deps_file = NS_NEPALI_DATE_DIR . '/build/admin.asset.php';
 
 		$dependency = array();
+		$version = '1.0.0';
 
 		if ( file_exists( $deps_file ) ) {
 			$deps_file  = require $deps_file;
@@ -165,47 +164,6 @@ class Admin {
 		}
 
 		wp_enqueue_style( 'ns-nepali-date-admin', NS_NEPALI_DATE_URL . '/build/admin.css', array(), $version );
-
 		wp_enqueue_script( 'ns-nepali-date-admin', NS_NEPALI_DATE_URL . '/build/admin.js', $dependency, $version, true );
-
-		// Posts.
-		$deps_file = NS_NEPALI_DATE_DIR . '/build/posts.asset.php';
-
-		$dependency = array();
-
-		if ( file_exists( $deps_file ) ) {
-			$deps_file  = require $deps_file;
-			$dependency = $deps_file['dependencies'];
-			$version    = $deps_file['version'];
-		}
-
-		$data = array(
-			'ajax_url'     => admin_url( 'admin-ajax.php' ),
-			'posts_action' => 'nsnd_nsbl_get_posts',
-		);
-
-		wp_enqueue_script( 'ns-nepali-date-posts', NS_NEPALI_DATE_URL . '/build/posts.js', $dependency, $version, true );
-		wp_localize_script( 'ns-nepali-date-posts', 'NSND_POSTS', $data );
-	}
-
-	/**
-	 * AJAX callback for blog posts.
-	 *
-	 * @since 1.0.0
-	 */
-	public function get_posts_ajax_callback() {
-		$output = array();
-
-		$posts = Helper::get_blog_feed_items();
-
-		if ( ! empty( $posts ) ) {
-			$output = $posts;
-		}
-
-		if ( ! empty( $output ) ) {
-			wp_send_json_success( $output, 200 );
-		} else {
-			wp_send_json_error( $output, 404 );
-		}
 	}
 }

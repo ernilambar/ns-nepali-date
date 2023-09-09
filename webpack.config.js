@@ -10,7 +10,6 @@ module.exports = {
 	...defaultConfig,
 	entry: {
 		admin: path.resolve( __dirname, 'src', 'admin.js' ),
-		posts: path.resolve( __dirname, 'src', 'posts.js' ),
 	},
 	plugins: [
 		...defaultConfig.plugins,
