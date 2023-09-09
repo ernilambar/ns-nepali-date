@@ -46,7 +46,7 @@
     "js:dev": "bun build ./src/admin.ts --outdir=build --sourcemap=inline --watch",
     "css:dev": "sass --watch ./src/admin.scss ./build/admin.css",
     "dev": "conc \"bun run js:dev\" \"bun run css:dev\" ",
-    "css:build": "sass ./src/admin.scss ./build/admin.css",
+    "css:build": "sass ./src/admin.scss ./build/admin.css --style=compressed --no-source-map",
     "js:build": "bun build ./src/admin.ts --outdir=build --sourcemap=none --minify",
     "hash": "bun run bin/hasher.js",
     "build": "bun run js:build && bun run css:build",
