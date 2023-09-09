@@ -123,13 +123,5 @@ class Options {
 			),
 			$welcome_object
 		);
-
-		$welcome_object->render_sidebar_box(
-			array(
-				'title'   => 'Recent Blog Posts',
-				'content' => '<div id="nsnd-posts-app"></div>',
-			),
-			$welcome_object
-		);
 	}
 }

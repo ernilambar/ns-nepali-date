@@ -1,5 +1,3 @@
-import './sass/admin.scss';
-
 const nsndToggler = () => {
 	const btnToggleReference = document.querySelector(
 		'.btn-toggle-reference'
@@ -25,19 +23,24 @@ const nsndCopier = () => {
 	}
 
 	for ( const link of links ) {
-		link.addEventListener( 'click', function( e ) {
+		link.addEventListener( 'click', function( e: Event ) {
 			e.preventDefault();
 
-			const el = e.currentTarget;
+			const el = e.currentTarget as HTMLElement;
 
-			const format = el.getAttribute( 'data-format' );
+			if (el) {
+				const format: string = el.getAttribute( 'data-format' ) as string;
 
-			const parent = el.closest( 'td' );
+				const parent = el.closest( 'td' );
 
-			const input = parent.querySelector( 'input' );
+				if ( parent ) {
+					const input: HTMLInputElement = <HTMLInputElement>parent.querySelector( 'input' );
 
-			if ( input ) {
-				input.value = format;
+					if ( input ) {
+						input.value = format;
+					}
+				}
+
 			}
 		} );
 	}
