@@ -48,7 +48,8 @@
   "scripts": {
     "dev": "wp-scripts start",
     "css": "sass ./src/admin.scss ./build/admin.css",
-    "build": "bun run bin/compile.js && bun run css",
+		"hash": "bun run bin/hasher.js",
+    "build": "bun run bin/compile.js && bun run css && bun run hash",
     "lint:css": "wp-scripts lint-style 'src/**/*.{css,scss}'",
     "lint:css:fix": "wp-scripts lint-style 'src/**/*.{css,scss}' --fix",
     "lint:js": "wp-scripts lint-js ./src *.js",
