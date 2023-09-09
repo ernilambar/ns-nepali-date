@@ -40,6 +40,7 @@
     "easy-replace-in-files": "^1.0.3",
     "node-wp-i18n": "^1.2.7",
     "packtor": "^1.0.2",
+    "sass": "^1.66.1",
     "shx": "^0.3.4"
   },
   "scripts": {
