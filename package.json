@@ -26,6 +26,8 @@
       "!*.lock",
       "!*.lockb",
       "!*.yaml",
+      "!bin/**/*",
+      "!languages/**/*",
       "!src/**/*",
       "!vendor/yahnis-elsts/plugin-update-checker/languages/*"
     ]
