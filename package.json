@@ -31,9 +31,6 @@
     ]
   },
   "browserslist": "> 1%, not dead",
-  "dependencies": {
-    "spinno": "^1.0.3"
-  },
   "devDependencies": {
     "browserslist": "^4.21.9",
     "concurrently": "^8.2.1",
