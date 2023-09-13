@@ -1,63 +1,63 @@
 {
-  "name": "ns-nepali-date",
-  "title": "NS Nepali Date",
-  "version": "1.0.18",
-  "description": "NS Nepali Date",
-  "author": "Nilambar Sharma",
-  "license": "GPL-2.0-or-later",
-  "main_file": "ns-nepali-date.php",
-  "keywords": [
-    "wordpress",
-    "wordpress-plugin"
-  ],
-  "homepage": "https://github.com/ernilambar/ns-nepali-date",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/ernilambar/ns-nepali-date.git"
-  },
-  "bugs": {
-    "url": "https://github.com/ernilambar/ns-nepali-date/issues"
-  },
-  "packtor": {
-    "files": [
-      "**/*",
-      "!*.js",
-      "!*.json",
-      "!*.lock",
-      "!*.lockb",
-      "!*.yaml",
-      "!bin/**/*",
-      "!languages/**/*",
-      "!src/**/*",
-      "!vendor/yahnis-elsts/plugin-update-checker/languages/*"
-    ]
-  },
-  "browserslist": "> 1%, not dead",
-  "devDependencies": {
-    "browserslist": "^4.21.9",
-    "concurrently": "^8.2.1",
-    "easy-replace-in-files": "^1.0.3",
-    "node-wp-i18n": "^1.2.7",
-    "packtor": "^1.0.2",
-    "sass": "^1.66.1",
-    "shx": "^0.3.4"
-  },
-  "scripts": {
-    "js:dev": "bun build ./src/admin.ts --outdir=build --sourcemap=inline --watch",
-    "css:dev": "sass --watch ./src/admin.scss ./build/admin.css",
-    "dev": "conc \"bun run js:dev\" \"bun run css:dev\" ",
-    "css:build": "sass ./src/admin.scss ./build/admin.css --style=compressed --no-source-map",
-    "js:build": "bun build ./src/admin.ts --outdir=build --sourcemap=none --minify",
-    "hash": "bun run bin/hasher.js",
-    "build": "bun run js:build && bun run css:build",
-    "ready": "bun run build && bun run hash",
-    "prepare": "composer install",
-    "version": "easy-replace-in-files",
-    "td": "wpi18n addtextdomain --exclude=vendor,deploy,node_modules",
-    "pot": "wpi18n makepot --domain-path=languages --exclude=vendor,deploy,node_modules",
-    "ready:build": "shx rm -rf build/ && bun run ready",
-    "ready:vendor": "shx rm -rf vendor/ && composer install --no-dev --no-scripts -o",
-    "predeploy": "bun run ready:vendor && bun run ready:build",
-    "deploy": "packtor"
-  }
+	"name": "ns-nepali-date",
+	"title": "NS Nepali Date",
+	"version": "1.0.18",
+	"description": "NS Nepali Date",
+	"author": "Nilambar Sharma",
+	"license": "GPL-2.0-or-later",
+	"main_file": "ns-nepali-date.php",
+	"keywords": [
+		"wordpress",
+		"wordpress-plugin"
+	],
+	"homepage": "https://github.com/ernilambar/ns-nepali-date",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/ernilambar/ns-nepali-date.git"
+	},
+	"bugs": {
+		"url": "https://github.com/ernilambar/ns-nepali-date/issues"
+	},
+	"packtor": {
+		"files": [
+			"**/*",
+			"!*.js",
+			"!*.json",
+			"!*.lock",
+			"!*.lockb",
+			"!*.yaml",
+			"!bin/**/*",
+			"!languages/**/*",
+			"!src/**/*",
+			"!vendor/yahnis-elsts/plugin-update-checker/languages/*"
+		]
+	},
+	"browserslist": "> 1%, not dead",
+	"devDependencies": {
+		"browserslist": "^4.21.9",
+		"concurrently": "^8.2.1",
+		"easy-replace-in-files": "^1.0.3",
+		"node-wp-i18n": "^1.2.7",
+		"packtor": "^1.0.2",
+		"sass": "^1.66.1",
+		"shx": "^0.3.4"
+	},
+	"scripts": {
+		"js:dev": "bun build ./src/admin.ts --outdir=build --sourcemap=inline --watch",
+		"css:dev": "sass --watch ./src/admin.scss ./build/admin.css",
+		"dev": "conc \"bun run js:dev\" \"bun run css:dev\" ",
+		"css:build": "sass ./src/admin.scss ./build/admin.css --style=compressed --no-source-map",
+		"js:build": "bun build ./src/admin.ts --outdir=build --sourcemap=none --minify",
+		"hash": "bun run bin/hasher.js",
+		"build": "bun run js:build && bun run css:build",
+		"ready": "bun run build && bun run hash",
+		"prepare": "composer install",
+		"version": "easy-replace-in-files",
+		"td": "wpi18n addtextdomain --exclude=vendor,deploy,node_modules",
+		"pot": "wpi18n makepot --domain-path=languages --exclude=vendor,deploy,node_modules",
+		"ready:build": "shx rm -rf build/ && bun run ready",
+		"ready:vendor": "shx rm -rf vendor/ && composer install --no-dev --no-scripts -o",
+		"predeploy": "bun run ready:vendor && bun run ready:build",
+		"deploy": "packtor"
+	}
 }
