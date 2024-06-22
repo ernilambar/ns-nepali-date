@@ -18,27 +18,32 @@
 	"bugs": {
 		"url": "https://github.com/ernilambar/ns-nepali-date/issues"
 	},
+	"browserslist": "> 1%, not dead",
 	"packtor": {
 		"files": [
 			"**/*",
 			"!*.js",
 			"!*.json",
 			"!*.lock",
-			"!*.lockb",
 			"!*.yaml",
-			"!bin/**/*",
 			"!languages/**/*",
 			"!src/**/*",
 			"!vendor/yahnis-elsts/plugin-update-checker/languages/*"
 		]
 	},
-	"browserslist": "> 1%, not dead",
+	"npmpackagejsonlint": {
+		"extends": "@wordpress/npm-package-json-lint-config"
+	},
 	"devDependencies": {
+		"@kucrut/vite-for-wp": "^0.9.1",
+		"@wordpress/npm-package-json-lint-config": "^5.1.0",
 		"browserslist": "^4.21.9",
 		"concurrently": "^8.2.1",
 		"easy-replace-in-files": "^1.0.3",
 		"node-wp-i18n": "^1.2.7",
+		"npm-package-json-lint": "^8.0.0",
 		"packtor": "^1.0.2",
+		"prettier": "npm:wp-prettier@^3.0.3",
 		"sass": "^1.66.1",
 		"shx": "^0.3.4"
 	},
@@ -48,16 +53,20 @@
 		"dev": "conc \"bun run js:dev\" \"bun run css:dev\" ",
 		"css:build": "sass ./src/admin.scss ./build/admin.css --style=compressed --no-source-map",
 		"js:build": "bun build ./src/admin.ts --outdir=build --sourcemap=none --minify",
-		"hash": "bun run bin/hasher.js",
 		"build": "bun run js:build && bun run css:build",
-		"ready": "bun run build && bun run hash",
-		"prepare": "composer install",
+		"ready": "bun run build",
 		"version": "easy-replace-in-files",
-		"td": "wpi18n addtextdomain --exclude=vendor,deploy,node_modules",
-		"pot": "wpi18n makepot --domain-path=languages --exclude=vendor,deploy,node_modules",
+		"format": "prettier --write \"src/**/*.{js,jsx,css,scss}\" vite.config.js *.json",
+		"lint-pkg-json": "npmPkgJsonLint .",
+		"pot": "composer run-script pot",
 		"ready:build": "shx rm -rf build/ && bun run ready",
-		"ready:vendor": "shx rm -rf vendor/ && composer install --no-dev --no-scripts -o",
+		"ready:vendor": "shx rm -rf vendor/ && composer install --no-dev -o",
 		"predeploy": "bun run ready:vendor && bun run ready:build",
 		"deploy": "packtor"
+	},
+	"pnpm": {
+		"patchedDependencies": {
+			"@kucrut/vite-for-wp@0.9.1": "patches/@kucrut__vite-for-wp@0.9.1.patch"
+		}
 	}
 }

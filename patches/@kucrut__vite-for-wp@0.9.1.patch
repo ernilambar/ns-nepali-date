@@ -1,0 +1,13 @@
+diff --git a/src/exports/index.js b/src/exports/index.js
+index 9329cbddabfe0b1bf34e4d7248cc5677427c2a18..24f0d263ba3631d727c56f208f742553fcf5d4ce 100644
+--- a/src/exports/index.js
++++ b/src/exports/index.js
+@@ -43,7 +43,7 @@ export function v4wp( options = {} ) {
+ 					manifest: 'manifest.json',
+ 					modulePreload: false,
+ 					rollupOptions: { input },
+-					sourcemap: true,
++					sourcemap: false,
+ 				},
+ 				css: {
+ 					devSourcemap: true,
