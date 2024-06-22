@@ -8,6 +8,7 @@
 namespace NSNepaliDate\Admin;
 
 use NSNepaliDate\Common\Helper;
+use Kucrut\Vite;
 
 /**
  * Admin class.
@@ -151,11 +152,17 @@ class Admin {
 			return;
 		}
 
-		// Admin.
-		$hash_path = NS_NEPALI_DATE_DIR . '/build/hash.php';
-		$hash      = file_exists( $hash_path ) ? require $hash_path : filemtime( __FILE__ );
-
-		wp_enqueue_style( 'ns-nepali-date-admin', NS_NEPALI_DATE_URL . '/build/admin.css', array(), $hash );
-		wp_enqueue_script( 'ns-nepali-date-admin', NS_NEPALI_DATE_URL . '/build/admin.js', array(), $hash, true );
+		Vite\enqueue_asset(
+			NS_NEPALI_DATE_DIR . '/build',
+			'src/admin.js',
+			array(
+				'handle'           => 'ns-nepali-date-admin',
+				'dependencies'     => [],
+				'css-dependencies' => array(),
+				'css-media'        => 'all',
+				'css-only'         => false,
+				'in-footer'        => true,
+			)
+		);
 	}
 }
