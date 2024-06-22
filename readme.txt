@@ -1,14 +1,14 @@
 === NS Nepali Date ===
 
 Contributors: rabmalin
-Requires at least: 4.9
-Requires PHP: 5.6
-Tested up to: 6.2
-Stable tag: 1.0.18
+Requires at least: 6.0
+Requires PHP: 7.2
+Tested up to: 6.6
+Stable tag: 1.0.19
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Simple WordPress plugin to display post date in Nepali
+Simple WordPress plugin to display post date in Nepali.
 
 == Description ==
 
@@ -40,6 +40,9 @@ Nice, create an issue on the [Plugin Repo](https://github.com/ernilambar/ns-nepa
 1. Settings
 
 == Changelog ==
+
+= 1.0.19 - 22 Jun 2024 =
+* Update packages
 
 = 1.0.18 - 29 May 2023 =
 * Update posts list with React
