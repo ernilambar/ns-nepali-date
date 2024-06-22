@@ -1,8 +1,8 @@
 import "dotenv/config";
 import { v4wp } from "@kucrut/vite-for-wp";
-import { wp_scripts } from "@kucrut/vite-for-wp/plugins";
 import VitePluginBrowserSync from "vite-plugin-browser-sync";
 import postcssPresetEnv from "postcss-preset-env";
+import postcssNested from "postcss-nested";
 
 export default {
 	build: {
@@ -10,15 +10,14 @@ export default {
 	},
 	css: {
 		postcss: {
-			plugins: [postcssPresetEnv],
+			plugins: [postcssPresetEnv, postcssNested],
 		},
 	},
 	plugins: [
 		v4wp({
-			input: ["src/search.ts"],
+			input: ["src/admin.js"],
 			outDir: "build",
 		}),
-		wp_scripts(),
 		VitePluginBrowserSync({
 			dev: {
 				bs: {

@@ -18,6 +18,7 @@
 	"bugs": {
 		"url": "https://github.com/ernilambar/ns-nepali-date/issues"
 	},
+	"type": "module",
 	"browserslist": "> 1%, not dead",
 	"packtor": {
 		"files": [
@@ -37,31 +38,27 @@
 	"devDependencies": {
 		"@kucrut/vite-for-wp": "^0.9.1",
 		"@wordpress/npm-package-json-lint-config": "^5.1.0",
-		"browserslist": "^4.21.9",
-		"concurrently": "^8.2.1",
+		"dotenv": "^16.4.5",
 		"easy-replace-in-files": "^1.0.3",
-		"node-wp-i18n": "^1.2.7",
 		"npm-package-json-lint": "^8.0.0",
 		"packtor": "^1.0.2",
+		"postcss-nested": "^6.0.1",
+		"postcss-preset-env": "^9.5.14",
 		"prettier": "npm:wp-prettier@^3.0.3",
-		"sass": "^1.66.1",
-		"shx": "^0.3.4"
+		"shx": "^0.3.4",
+		"vite": "^5.3.1",
+		"vite-plugin-browser-sync": "^3.0.3"
 	},
 	"scripts": {
-		"js:dev": "bun build ./src/admin.ts --outdir=build --sourcemap=inline --watch",
-		"css:dev": "sass --watch ./src/admin.scss ./build/admin.css",
-		"dev": "conc \"bun run js:dev\" \"bun run css:dev\" ",
-		"css:build": "sass ./src/admin.scss ./build/admin.css --style=compressed --no-source-map",
-		"js:build": "bun build ./src/admin.ts --outdir=build --sourcemap=none --minify",
-		"build": "bun run js:build && bun run css:build",
-		"ready": "bun run build",
+		"dev": "vite",
+		"build": "vite build",
 		"version": "easy-replace-in-files",
-		"format": "prettier --write \"src/**/*.{js,jsx,css,scss}\" vite.config.js *.json",
 		"lint-pkg-json": "npmPkgJsonLint .",
 		"pot": "composer run-script pot",
-		"ready:build": "shx rm -rf build/ && bun run ready",
+		"format": "prettier --write \"src/**/*.{js,jsx,css,scss}\" vite.config.js *.json",
+		"ready:build": "shx rm -rf build/ && pnpm run build",
 		"ready:vendor": "shx rm -rf vendor/ && composer install --no-dev -o",
-		"predeploy": "bun run ready:vendor && bun run ready:build",
+		"predeploy": "pnpm run ready:vendor && pnpm run ready:build",
 		"deploy": "packtor"
 	},
 	"pnpm": {

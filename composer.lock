@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "06b866d64a4effbcc8ad08f333974365",
+    "content-hash": "78256a512f90f1985c6e29a6f84ddf18",
     "packages": [
         {
             "name": "ernilambar/nepali-date",
@@ -95,6 +95,45 @@
                 "source": "https://github.com/ernilambar/optioner/tree/2.0.10"
             },
             "time": "2024-06-18T09:46:28+00:00"
+        },
+        {
+            "name": "kucrut/vite-for-wp",
+            "version": "v0.9.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/kucrut/vite-for-wp.git",
+                "reference": "cc5dfb08d0a48730ff62aa3c30074b0f0a36808a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/kucrut/vite-for-wp/zipball/cc5dfb08d0a48730ff62aa3c30074b0f0a36808a",
+                "reference": "cc5dfb08d0a48730ff62aa3c30074b0f0a36808a",
+                "shasum": ""
+            },
+            "require-dev": {
+                "wp-coding-standards/wpcs": "^3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "vite-for-wp.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-only"
+            ],
+            "authors": [
+                {
+                    "name": "Dzikri Aziz"
+                }
+            ],
+            "description": "Vite integration for WordPress plugins and themes development.",
+            "support": {
+                "issues": "https://github.com/kucrut/vite-for-wp/issues",
+                "source": "https://github.com/kucrut/vite-for-wp/tree/v0.9.1"
+            },
+            "time": "2024-06-13T15:52:35+00:00"
         },
         {
             "name": "yahnis-elsts/plugin-update-checker",
@@ -1978,7 +2017,7 @@
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
-        "php": ">=5.6"
+        "php": ">=7.2"
     },
     "platform-dev": [],
     "plugin-api-version": "2.2.0"

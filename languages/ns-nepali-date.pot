@@ -41,12 +41,12 @@ msgstr ""
 msgid "https://www.nilambar.net/"
 msgstr ""
 
-#: app/Admin/Admin.php:48
+#: app/Admin/Admin.php:49
 #: app/Options/Options.php:68
 msgid "Settings"
 msgstr ""
 
-#: app/Admin/Admin.php:74
+#: app/Admin/Admin.php:75
 msgid "Examples:"
 msgstr ""
 
