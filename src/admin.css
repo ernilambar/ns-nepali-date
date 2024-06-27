@@ -1,38 +1,40 @@
-.example-formats {
-	margin-top: 10px;
-
-	a {
-		margin-right: 15px;
-	}
-
-	.title {
-		display: inline-block;
-		margin-right: 5px;
-	}
-}
-
-.format-reference {
-	margin-top: 10px;
-
-	table {
-		border-collapse: collapse;
+.optioner-wrap {
+	.example-formats {
 		margin-top: 10px;
 
-		tr.heading {
-			font-weight: 700;
+		a {
+			margin-right: 15px;
 		}
 
-		td {
-			padding: 5px !important;
-			border: 1px #ddd solid;
+		.title {
+			display: inline-block;
+			margin-right: 5px;
 		}
 	}
 
-	.format-reference-content {
-		display: none;
+	.format-reference {
+		margin-top: 10px;
 
-		&.active {
-			display: block;
+		table {
+			border-collapse: collapse;
+			margin-top: 10px;
+
+			tr.heading {
+				font-weight: 700;
+			}
+
+			td {
+				padding: 5px !important;
+				border: 1px #ddd solid;
+			}
+		}
+
+		.format-reference-content {
+			display: none;
+
+			&.active {
+				display: block;
+			}
 		}
 	}
 }

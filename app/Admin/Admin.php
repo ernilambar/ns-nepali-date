@@ -157,7 +157,7 @@ class Admin {
 			'src/admin.js',
 			array(
 				'handle'           => 'ns-nepali-date-admin',
-				'dependencies'     => [],
+				'dependencies'     => array(),
 				'css-dependencies' => array(),
 				'css-media'        => 'all',
 				'css-only'         => false,

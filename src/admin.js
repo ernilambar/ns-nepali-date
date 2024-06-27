@@ -1,8 +1,8 @@
-import { nsndCopier, nsndToggler } from "./js/utils";
+import { nsndCopier, nsndToggler } from './js/utils';
 
-import "./admin.css";
+import './admin.css';
 
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener( 'DOMContentLoaded', function () {
 	nsndToggler();
 	nsndCopier();
-});
+} );

@@ -23,21 +23,27 @@
 	"packtor": {
 		"files": [
 			"**/*",
+			"!*.cjs",
 			"!*.js",
 			"!*.json",
 			"!*.lock",
 			"!*.yaml",
 			"!languages/**/*",
+			"!patches/**/*",
 			"!src/**/*",
-			"!vendor/yahnis-elsts/plugin-update-checker/languages/*"
+			"!vendor/yahnis-elsts/plugin-update-checker/languages/*",
+			"!vendor/kucrut/vite-for-wp/eslint.config.js",
+			"!vendor/kucrut/vite-for-wp/scripts/*",
+			"!vendor/kucrut/vite-for-wp/types/*"
 		]
 	},
 	"npmpackagejsonlint": {
 		"extends": "@wordpress/npm-package-json-lint-config"
 	},
 	"devDependencies": {
-		"@kucrut/vite-for-wp": "^0.9.1",
-		"@wordpress/npm-package-json-lint-config": "^5.1.0",
+		"@kucrut/vite-for-wp": "^0.9.2",
+		"@wordpress/npm-package-json-lint-config": "^5.2.0",
+		"@wordpress/prettier-config": "^4.2.0",
 		"dotenv": "^16.4.5",
 		"easy-replace-in-files": "^1.0.3",
 		"npm-package-json-lint": "^8.0.0",
@@ -55,15 +61,15 @@
 		"version": "easy-replace-in-files",
 		"lint-pkg-json": "npmPkgJsonLint .",
 		"pot": "composer run-script pot",
-		"format": "prettier --write \"src/**/*.{js,jsx,css,scss}\" vite.config.js *.json",
-		"ready:build": "shx rm -rf build/ && pnpm run build",
-		"ready:vendor": "shx rm -rf vendor/ && composer install --no-dev -o",
-		"predeploy": "pnpm run ready:vendor && pnpm run ready:build",
+		"format": "prettier --write \"src/**/*.{js,jsx,css,scss}\" vite.config.js postcss.config.cjs *.json",
+		"vendor": "composer install --no-dev --no-scripts -o",
+		"clean": "shx rm -rf build/ && shx rm -rf vendor/",
+		"predeploy": "pnpm run clean && pnpm run vendor && pnpm run build",
 		"deploy": "packtor"
 	},
 	"pnpm": {
 		"patchedDependencies": {
-			"@kucrut/vite-for-wp@0.9.1": "patches/@kucrut__vite-for-wp@0.9.1.patch"
+			"@kucrut/vite-for-wp@0.9.2": "patches/@kucrut__vite-for-wp@0.9.2.patch"
 		}
 	}
 }
