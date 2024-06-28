@@ -51,7 +51,7 @@
 		"postcss-nested": "^6.0.1",
 		"postcss-preset-env": "^9.5.14",
 		"prettier": "npm:wp-prettier@^3.0.3",
-		"shx": "^0.3.4",
+		"rimraf": "^5.0.7",
 		"vite": "^5.3.1",
 		"vite-plugin-browser-sync": "^3.0.3"
 	},
@@ -63,7 +63,7 @@
 		"pot": "composer run-script pot",
 		"format": "prettier --write \"src/**/*.{js,jsx,css,scss}\" vite.config.js postcss.config.cjs *.json",
 		"vendor": "composer install --no-dev --no-scripts -o",
-		"clean": "shx rm -rf build/ && shx rm -rf vendor/",
+		"clean": "rimraf build vendor",
 		"predeploy": "pnpm run clean && pnpm run vendor && pnpm run build",
 		"deploy": "packtor"
 	},
