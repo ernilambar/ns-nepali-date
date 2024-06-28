@@ -63,8 +63,8 @@
 		"pot": "composer run-script pot",
 		"format": "prettier --write \"src/**/*.{js,jsx,css,scss}\" vite.config.js postcss.config.cjs *.json",
 		"vendor": "composer install --no-dev --no-scripts -o",
-		"clean": "rimraf build vendor",
-		"predeploy": "pnpm run clean && pnpm run vendor && pnpm run build",
+		"ready": "pnpm run vendor && pnpm run build",
+		"predeploy": "rimraf build vendor && pnpm run ready",
 		"deploy": "packtor"
 	},
 	"pnpm": {
