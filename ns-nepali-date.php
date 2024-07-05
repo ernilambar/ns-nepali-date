@@ -16,6 +16,8 @@
 
 namespace NSNepaliDate;
 
+use YahnisElsts\PluginUpdateChecker\v5\PucFactory;
+
 // If this file is called directly, abort.
 if ( ! defined( 'WPINC' ) ) {
 	die;
@@ -36,8 +38,8 @@ if ( file_exists( NS_NEPALI_DATE_DIR . '/vendor/autoload.php' ) ) {
 }
 
 if ( class_exists( 'NSNepaliDate\Init' ) ) {
-	\NSNepaliDate\Init::register_services();
+	Init::register_services();
 }
 
-$nsnd_update_checker = \YahnisElsts\PluginUpdateChecker\v5\PucFactory::buildUpdateChecker( 'https://github.com/ernilambar/ns-nepali-date', __FILE__, NS_NEPALI_DATE_SLUG );
+$nsnd_update_checker = PucFactory::buildUpdateChecker( 'https://github.com/ernilambar/ns-nepali-date', __FILE__, NS_NEPALI_DATE_SLUG );
 $nsnd_update_checker->getVcsApi()->enableReleaseAssets();
