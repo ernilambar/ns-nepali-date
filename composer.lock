@@ -98,16 +98,16 @@
         },
         {
             "name": "kucrut/vite-for-wp",
-            "version": "v0.9.2",
+            "version": "v0.9.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/kucrut/vite-for-wp.git",
-                "reference": "b6debd06cb78bd8f003e93e785e177c96553acc7"
+                "reference": "df5a0a7f8aae1eed2d03a3fa4d33f5b6a5fb484a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kucrut/vite-for-wp/zipball/b6debd06cb78bd8f003e93e785e177c96553acc7",
-                "reference": "b6debd06cb78bd8f003e93e785e177c96553acc7",
+                "url": "https://api.github.com/repos/kucrut/vite-for-wp/zipball/df5a0a7f8aae1eed2d03a3fa4d33f5b6a5fb484a",
+                "reference": "df5a0a7f8aae1eed2d03a3fa4d33f5b6a5fb484a",
                 "shasum": ""
             },
             "require-dev": {
@@ -131,9 +131,9 @@
             "description": "Vite integration for WordPress plugins and themes development.",
             "support": {
                 "issues": "https://github.com/kucrut/vite-for-wp/issues",
-                "source": "https://github.com/kucrut/vite-for-wp/tree/v0.9.2"
+                "source": "https://github.com/kucrut/vite-for-wp/tree/v0.9.3"
             },
-            "time": "2024-06-26T14:25:32+00:00"
+            "time": "2024-06-30T17:46:55+00:00"
         },
         {
             "name": "yahnis-elsts/plugin-update-checker",
