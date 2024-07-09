@@ -5,6 +5,7 @@ import VitePluginBrowserSync from 'vite-plugin-browser-sync';
 export default {
 	build: {
 		target: 'es2015',
+		sourcemap: false,
 	},
 	plugins: [
 		v4wp( {
