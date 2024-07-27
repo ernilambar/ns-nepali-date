@@ -28,7 +28,6 @@
 			"!*.json",
 			"!*.lock",
 			"!*.yaml",
-			"!devtools/**/*",
 			"!languages/**/*",
 			"!src/**/*",
 			"!vendor/yahnis-elsts/plugin-update-checker/languages/*"
