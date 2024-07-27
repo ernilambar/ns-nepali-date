@@ -1,10 +1,6 @@
 const nsndToggler = () => {
-	const btnToggleReference = document.querySelector(
-		'.btn-toggle-reference'
-	);
-	const formatReferenceContent = document.querySelector(
-		'.format-reference-content'
-	);
+	const btnToggleReference = document.querySelector( '.btn-toggle-reference' );
+	const formatReferenceContent = document.querySelector( '.format-reference-content' );
 
 	if ( btnToggleReference && formatReferenceContent ) {
 		btnToggleReference.addEventListener( 'click', function ( e ) {
