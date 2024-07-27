@@ -31,5 +31,5 @@ jobs:
         with:
           composer-options: '--prefer-dist --no-progress --no-interaction'
 
-      - name: Run tests
+      - name: Run linting
         run: composer run-script lint
