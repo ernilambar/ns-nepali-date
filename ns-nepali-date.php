@@ -4,6 +4,8 @@
  * Plugin URI: https://github.com/ernilambar/ns-nepali-date/
  * Description: Display post date in Nepali.
  * Version: 1.0.19
+ * Requires at least: 6.0
+ * Requires PHP: 7.4
  * Author: Nilambar Sharma
  * Author URI: https://www.nilambar.net/
  * Text Domain: ns-nepali-date

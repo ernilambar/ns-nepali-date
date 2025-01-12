@@ -1,8 +1,6 @@
 === NS Nepali Date ===
 
 Contributors: rabmalin
-Requires at least: 6.0
-Requires PHP: 7.2
 Tested up to: 6.6
 Stable tag: 1.0.19
 License: GPLv2 or later
@@ -13,21 +11,6 @@ Simple WordPress plugin to display post date in Nepali.
 == Description ==
 
 This plugin helps you to display post date in Nepali format.
-
-== Installation ==
-
-= Using The WordPress Dashboard =
-
-1. Navigate to the 'Add New' Plugin Dashboard
-1. Select 'ns-nepali-date.zip' from your computer
-1. Upload
-1. Activate the plugin on the WordPress Plugin Dashboard
-
-= Using FTP =
-
-1. Extract 'ns-nepali-date.zip' to your computer
-1. Upload the 'ns-nepali-date' directory to your 'wp-content/plugins' directory
-1. Activate the plugin on the WordPress Plugins dashboard
 
 == Frequently Asked Questions ==
 
@@ -95,7 +78,3 @@ Nice, create an issue on the [Plugin Repo](https://github.com/ernilambar/ns-nepa
 
 = 1.0.0 - 20 Jan 2014 =
 * Initial release
-
-== Upgrade Notice ==
-
-NS Nepali Date
