@@ -7,6 +7,10 @@ on:
       - main
       - master
 
+concurrency:
+  group: ${{ github.repository }}-${{ github.workflow }}
+  cancel-in-progress: true
+
 jobs:
   pcp:
     name: PCP
@@ -35,4 +39,5 @@ jobs:
     - name: Run plugin check
       uses: wordpress/plugin-check-action@v1
       with:
-        build-dir: './deploy/ns-nepali-date'
+        build-dir: './deploy/${{ github.event.repository.name }}'
+        wp-version: 'trunk'

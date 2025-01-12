@@ -1,6 +1,5 @@
 {
 	"name": "ns-nepali-date",
-	"title": "NS Nepali Date",
 	"version": "1.0.19",
 	"description": "NS Nepali Date",
 	"author": "Nilambar Sharma",
@@ -28,6 +27,7 @@
 			"!easy-replace-in-files.json",
 			"!package.json",
 			"!*.lock",
+			"!*.md",
 			"!*.yaml",
 			"!languages/**/*",
 			"!src/**/*",
@@ -38,19 +38,19 @@
 		"extends": "@wordpress/npm-package-json-lint-config"
 	},
 	"devDependencies": {
-		"@kucrut/vite-for-wp": "^0.9.3",
-		"@wordpress/npm-package-json-lint-config": "^5.4.0",
-		"@wordpress/prettier-config": "^4.4.0",
-		"dotenv": "^16.4.5",
+		"@kucrut/vite-for-wp": "^0.10.0",
+		"@wordpress/npm-package-json-lint-config": "^5.15.0",
+		"@wordpress/prettier-config": "^4.15.0",
+		"dotenv": "^16.4.7",
 		"easy-replace-in-files": "^1.0.3",
 		"npm-package-json-lint": "^8.0.0",
 		"packtor": "^1.0.2",
-		"postcss-nested": "^6.2.0",
-		"postcss-preset-env": "^9.6.0",
+		"postcss-nested": "^7.0.2",
+		"postcss-preset-env": "^10.1.3",
 		"prettier": "npm:wp-prettier@^3.0.3",
 		"rimraf": "^6.0.1",
-		"vite": "^5.3.5",
-		"vite-plugin-browser-sync": "^3.0.4"
+		"vite": "^6.0.7",
+		"vite-plugin-browser-sync": "^4.0.0"
 	},
 	"scripts": {
 		"dev": "vite",
