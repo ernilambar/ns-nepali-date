@@ -2,7 +2,7 @@
 
 Contributors: rabmalin
 Tested up to: 6.7
-Stable tag: 1.0.19
+Stable tag: 1.0.20
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/old-licenses/gpl-2.0.txt
 
@@ -23,6 +23,9 @@ Nice, create an issue on the [Plugin Repo](https://github.com/ernilambar/ns-nepa
 1. Settings
 
 == Changelog ==
+
+= 1.0.20 - 12 Jan 2025 =
+* Update packages
 
 = 1.0.19 - 22 Jun 2024 =
 * Update packages
