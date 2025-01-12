@@ -8,10 +8,9 @@
  * Requires PHP: 7.4
  * Author: Nilambar Sharma
  * Author URI: https://www.nilambar.net/
+ * License: GPLv2 or later
+ * License URI: https://www.gnu.org/licenses/old-licenses/gpl-2.0.txt
  * Text Domain: ns-nepali-date
- * Domain Path: /languages
- * License: GPL-2.0+
- * License URI: http://www.gnu.org/licenses/gpl-2.0.txt
  *
  * @package NSNepaliDate
  */

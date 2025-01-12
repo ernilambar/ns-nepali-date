@@ -33,6 +33,9 @@
 	<!-- Minimum support WP Version. -->
 	<config name="minimum_wp_version" value="6.0"/>
 
+	<!-- PHP version check. -->
+	<config name="testVersion" value="7.4-"/>
+
 	<!-- Don't worry about files that don't contain any code -->
 	<rule ref="Internal.NoCodeFound">
 		<severity>0</severity>
@@ -119,7 +122,4 @@
 
 	<!-- Loads the PHP Compatibility ruleset. -->
 	<rule ref="PHPCompatibility" />
-
-	<!-- PHP version check. -->
-	<config name="testVersion" value="7.2-"/>
 </ruleset>
