@@ -3,7 +3,7 @@
  * Plugin Name: NS Nepali Date
  * Plugin URI: https://github.com/ernilambar/ns-nepali-date/
  * Description: Display post date in Nepali.
- * Version: 1.0.20
+ * Version: 1.0.21
  * Requires at least: 6.0
  * Requires PHP: 7.4
  * Author: Nilambar Sharma
@@ -24,7 +24,7 @@ if ( ! defined( 'WPINC' ) ) {
 	die;
 }
 
-define( 'NS_NEPALI_DATE_VERSION', '1.0.20' );
+define( 'NS_NEPALI_DATE_VERSION', '1.0.21' );
 define( 'NS_NEPALI_DATE_SLUG', 'ns-nepali-date' );
 define( 'NS_NEPALI_DATE_BASENAME', basename( __DIR__ ) );
 define( 'NS_NEPALI_DATE_BASE_FILENAME', plugin_basename( __FILE__ ) );
