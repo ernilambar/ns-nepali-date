@@ -1,0 +1,9 @@
+{
+  "tasks": {
+    "build": "deno run -A bin/build.ts"
+  },
+  "imports": {
+    "postcss": "npm:postcss@^8.5.3",
+    "postcss-preset-env": "npm:postcss-preset-env@^10.1.4"
+  }
+}
