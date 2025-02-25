@@ -18,7 +18,6 @@
 		"php": ">=7.4",
 		"ernilambar/nepali-date": "^1",
 		"ernilambar/optioner": "^3",
-		"kucrut/vite-for-wp": "^0.10",
 		"yahnis-elsts/plugin-update-checker": "^5"
 	},
 	"require-dev": {
