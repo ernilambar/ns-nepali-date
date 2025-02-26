@@ -22,7 +22,6 @@
 	"packtor": {
 		"files": [
 			"**/*",
-			"!*.cjs",
 			"!*.js",
 			"!easy-replace-in-files.json",
 			"!package.json",
@@ -34,14 +33,9 @@
 			"!vendor/yahnis-elsts/plugin-update-checker/languages/*"
 		]
 	},
-	"npmpackagejsonlint": {
-		"extends": "@wordpress/npm-package-json-lint-config"
-	},
 	"devDependencies": {
-		"@wordpress/npm-package-json-lint-config": "^5.15.0",
 		"@wordpress/prettier-config": "^4.15.0",
 		"easy-replace-in-files": "^1.0.3",
-		"npm-package-json-lint": "^8.0.0",
 		"packtor": "^1.0.2",
 		"parcel": "^2.13.3",
 		"postcss": "^8.2.1",
@@ -54,7 +48,6 @@
 		"dev": "parcel watch src/admin.js --dist-dir build --public-url ./",
 		"build": "parcel build src/admin.js --no-source-maps --dist-dir build --public-url ./",
 		"version": "easy-replace-in-files",
-		"lint-pkg-json": "npmPkgJsonLint .",
 		"format": "prettier \"**/*.{css,js,json,mjs}\" --write",
 		"vendor": "composer install --no-dev --no-scripts -o",
 		"ready": "pnpm run vendor && pnpm run build",
