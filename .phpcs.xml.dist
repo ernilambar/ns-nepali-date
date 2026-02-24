@@ -81,7 +81,9 @@
 
 	<rule ref="WordPress.WP.I18n">
 		<properties>
-			<property name="text_domain" type="array" value="ns-nepali-date" />
+			<property name="text_domain" type="array">
+				<element value="ns-nepali-date" />
+			</property>
 		</properties>
 	</rule>
 
