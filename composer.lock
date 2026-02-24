@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ernilambar/gitvise.git",
-                "reference": "66166d44a3c404875b95c73c20b8cff7f8d8d808"
+                "reference": "72d5da0670fbb178832f5202e7addda7b035edc9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ernilambar/gitvise/zipball/66166d44a3c404875b95c73c20b8cff7f8d8d808",
-                "reference": "66166d44a3c404875b95c73c20b8cff7f8d8d808",
+                "url": "https://api.github.com/repos/ernilambar/gitvise/zipball/72d5da0670fbb178832f5202e7addda7b035edc9",
+                "reference": "72d5da0670fbb178832f5202e7addda7b035edc9",
                 "shasum": ""
             },
             "require": {
@@ -43,7 +43,7 @@
                 "issues": "https://github.com/ernilambar/gitvise/issues",
                 "source": "https://github.com/ernilambar/gitvise/tree/1.0.0"
             },
-            "time": "2026-02-24T04:37:46+00:00"
+            "time": "2026-02-24T12:10:09+00:00"
         },
         {
             "name": "ernilambar/nepali-date",
