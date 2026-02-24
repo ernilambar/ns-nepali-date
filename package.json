@@ -48,7 +48,7 @@
 		"dev": "parcel watch src/admin.js --dist-dir build --public-url ./",
 		"build": "parcel build src/admin.js --no-source-maps --dist-dir build --public-url ./",
 		"version": "easy-replace-in-files",
-		"format": "prettier \"**/*.{css,js,json,mjs}\" --write",
+		"format": "prettier \"**/*.{css,js,json,mjs}\" --write --log-level warn",
 		"vendor": "composer install --no-dev --no-scripts -o",
 		"ready": "pnpm run vendor && pnpm run build",
 		"predeploy": "rimraf build deploy vendor && pnpm run ready",
