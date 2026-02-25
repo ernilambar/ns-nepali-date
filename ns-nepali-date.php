@@ -36,6 +36,7 @@ if ( file_exists( NS_NEPALI_DATE_DIR . '/vendor/autoload.php' ) ) {
 	require_once NS_NEPALI_DATE_DIR . '/vendor/autoload.php';
 	require_once NS_NEPALI_DATE_DIR . '/vendor/ernilambar/optioner/optioner.php';
 	require_once NS_NEPALI_DATE_DIR . '/vendor/ernilambar/gitvise/init.php';
+	require_once NS_NEPALI_DATE_DIR . '/vendor/ernilambar/vitbolt/init.php';
 }
 
 if ( class_exists( 'NSNepaliDate\Init' ) ) {
