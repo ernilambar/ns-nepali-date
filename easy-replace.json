@@ -1,4 +1,5 @@
 {
+	"$schema": "https://raw.githubusercontent.com/ernilambar/easy-replace-in-files/main/src/schemas/config.schema.json",
 	"easyReplaceInFiles": [
 		{
 			"files": "readme.txt",
