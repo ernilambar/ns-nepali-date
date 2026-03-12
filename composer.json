@@ -2,7 +2,10 @@
 	"name": "ernilambar/ns-nepali-date",
 	"description": "NS Nepali Date",
 	"license": "GPL-2.0-or-later",
-	"keywords": [ "wordpress", "wordpress-plugin" ],
+	"keywords": [
+		"wordpress",
+		"wordpress-plugin"
+	],
 	"authors": [
 		{
 			"name": "Nilambar Sharma",
@@ -16,7 +19,7 @@
 		"ernilambar/gitvise": "^1.0",
 		"ernilambar/nepali-date": "^1",
 		"ernilambar/optioner": "^3",
-		"ernilambar/vitbolt": "^1.0"
+		"kucrut/vite-for-wp": "^0.12.0"
 	},
 	"require-dev": {
 		"dealerdirect/phpcodesniffer-composer-installer": "^1",
@@ -49,7 +52,7 @@
 			"@lint-php",
 			"@phpcs"
 		],
-		"lint-php": "@php ./vendor/bin/parallel-lint --colors --exclude .git --exclude vendor --exclude node_modules --exclude deploy .",
+		"lint-php": "@php ./vendor/bin/parallel-lint -p php --colors --exclude .git --exclude vendor --exclude node_modules --exclude deploy .",
 		"phpcs": "@php ./vendor/bin/phpcs --report-full --report-summary"
 	}
 }

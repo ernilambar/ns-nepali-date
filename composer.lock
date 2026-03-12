@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4a7a926448955b979ee7d8841679a9ed",
+    "content-hash": "521e5ffdafa7b35facc74b25326e55d7",
     "packages": [
         {
             "name": "ernilambar/gitvise",
@@ -95,16 +95,16 @@
         },
         {
             "name": "ernilambar/optioner",
-            "version": "3.1.0",
+            "version": "3.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ernilambar/optioner.git",
-                "reference": "64727375fe13bd0c8faebb0088430bcf4fd8053a"
+                "reference": "145bd9778a030878d62f1cacfd1bcd97693bbeff"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ernilambar/optioner/zipball/64727375fe13bd0c8faebb0088430bcf4fd8053a",
-                "reference": "64727375fe13bd0c8faebb0088430bcf4fd8053a",
+                "url": "https://api.github.com/repos/ernilambar/optioner/zipball/145bd9778a030878d62f1cacfd1bcd97693bbeff",
+                "reference": "145bd9778a030878d62f1cacfd1bcd97693bbeff",
                 "shasum": ""
             },
             "require": {
@@ -113,8 +113,9 @@
             "require-dev": {
                 "dealerdirect/phpcodesniffer-composer-installer": "^1",
                 "php-parallel-lint/php-parallel-lint": "^1.4",
-                "phpcompatibility/php-compatibility": "dev-develop#9013cd039fe5740953f9fdeebd19d901b80e26f2",
-                "wp-coding-standards/wpcs": "^3.1"
+                "phpcompatibility/php-compatibility": "^10.0@alpha",
+                "squizlabs/php_codesniffer": "^3.13",
+                "wp-coding-standards/wpcs": "^3.3"
             },
             "type": "library",
             "notification-url": "https://packagist.org/downloads/",
@@ -137,48 +138,48 @@
             ],
             "support": {
                 "issues": "https://github.com/ernilambar/optioner/issues",
-                "source": "https://github.com/ernilambar/optioner/tree/3.1.0"
+                "source": "https://github.com/ernilambar/optioner/tree/3.1.1"
             },
-            "time": "2025-07-21T00:44:22+00:00"
+            "time": "2026-03-09T12:07:00+00:00"
         },
         {
-            "name": "ernilambar/vitbolt",
-            "version": "1.0.0",
+            "name": "kucrut/vite-for-wp",
+            "version": "v0.12.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/ernilambar/vitbolt.git",
-                "reference": "025e1b2ed156e026902da64a07970992efc06a63"
+                "url": "https://github.com/kucrut/vite-for-wp.git",
+                "reference": "45ec51bbaedbc4e7335db3b3d4a4923962634fea"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ernilambar/vitbolt/zipball/025e1b2ed156e026902da64a07970992efc06a63",
-                "reference": "025e1b2ed156e026902da64a07970992efc06a63",
+                "url": "https://api.github.com/repos/kucrut/vite-for-wp/zipball/45ec51bbaedbc4e7335db3b3d4a4923962634fea",
+                "reference": "45ec51bbaedbc4e7335db3b3d4a4923962634fea",
                 "shasum": ""
             },
-            "require": {
-                "php": ">=7.4"
-            },
             "require-dev": {
-                "dealerdirect/phpcodesniffer-composer-installer": "^1",
-                "phpunit/phpunit": "^9.0 || ^10.0",
-                "wp-coding-standards/wpcs": "^3.3"
+                "wp-coding-standards/wpcs": "^3.0"
             },
             "type": "library",
             "autoload": {
-                "psr-4": {
-                    "Nilambar\\Vitbolt\\": "src/"
-                }
+                "files": [
+                    "vite-for-wp.php"
+                ]
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "MIT"
+                "GPL-2.0-only"
             ],
-            "description": "Vite integration for WordPress plugins",
+            "authors": [
+                {
+                    "name": "Dzikri Aziz"
+                }
+            ],
+            "description": "Vite integration for WordPress plugins and themes development.",
             "support": {
-                "issues": "https://github.com/ernilambar/vitbolt/issues",
-                "source": "https://github.com/ernilambar/vitbolt/tree/1.0.0"
+                "issues": "https://github.com/kucrut/vite-for-wp/issues",
+                "source": "https://github.com/kucrut/vite-for-wp/tree/v0.12.0"
             },
-            "time": "2026-02-25T03:52:36+00:00"
+            "time": "2025-06-26T03:15:40+00:00"
         }
     ],
     "packages-dev": [

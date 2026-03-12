@@ -1,19 +1,16 @@
-import { resolve, dirname } from 'path';
+import { dirname } from 'path';
 import { fileURLToPath } from 'url';
+import { v4wp } from '@kucrut/vite-for-wp';
 
 const __dirname = dirname( fileURLToPath( import.meta.url ) );
 
 export default {
-	base: './',
-	root: __dirname,
-	build: {
-		outDir: 'build',
-		emptyOutDir: true,
-		manifest: true,
-		rollupOptions: {
-			input: resolve( __dirname, 'src/admin.js' ),
-		},
-	},
+	plugins: [
+		v4wp( {
+			input: 'src/admin.js',
+			outDir: 'build',
+		} ),
+	],
 	server: {
 		port: 5173,
 		strictPort: true,

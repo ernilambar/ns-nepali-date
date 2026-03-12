@@ -7,7 +7,7 @@
 
 namespace NSNepaliDate\Admin;
 
-use Nilambar\Vitbolt\ViteHelper;
+use Kucrut\Vite;
 use NSNepaliDate\Common\Helper;
 
 /**
@@ -18,34 +18,11 @@ use NSNepaliDate\Common\Helper;
 class Admin {
 
 	/**
-	 * Vite helper instance.
-	 *
-	 * @since 1.0.0
-	 * @var ViteHelper|null
-	 */
-	private $vite;
-
-	/**
 	 * Register.
 	 *
 	 * @since 1.0.0
 	 */
 	public function register() {
-		if ( class_exists( ViteHelper::class ) ) {
-			$this->vite = new ViteHelper(
-				NS_NEPALI_DATE_SLUG,
-				NS_NEPALI_DATE_URL,
-				NS_NEPALI_DATE_DIR,
-				array(
-					'dev_server_url' => 'http://localhost:5173',
-					'build_dir'      => 'build',
-					'manifest_file'  => '.vite/manifest.json',
-					'output_pattern' => 'manifest',
-				)
-			);
-			$this->vite->register_entry( 'ns-nepali-date-admin', 'src/admin.js', array(), true );
-		}
-
 		add_filter( 'plugin_action_links_' . NS_NEPALI_DATE_BASE_FILENAME, array( $this, 'customize_plugin_action_links' ) );
 		add_action( 'optioner_field_bottom_text', array( $this, 'customize_format' ), 10, 1 );
 		add_action( 'admin_enqueue_scripts', array( $this, 'load_assets' ) );
@@ -175,8 +152,13 @@ class Admin {
 			return;
 		}
 
-		if ( $this->vite ) {
-			$this->vite->enqueue_entry( 'ns-nepali-date-admin' );
-		}
+		Vite\enqueue_asset(
+			NS_NEPALI_DATE_DIR . '/build',
+			'src/admin.js',
+			array(
+				'handle'    => 'ns-nepali-date-admin',
+				'in-footer' => true,
+			)
+		);
 	}
 }
