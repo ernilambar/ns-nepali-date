@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "521e5ffdafa7b35facc74b25326e55d7",
+    "content-hash": "54f99e1e699dee96fe5e410414a61558",
     "packages": [
         {
             "name": "ernilambar/gitvise",
@@ -865,7 +865,9 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {},
+    "stability-flags": {
+        "phpcompatibility/php-compatibility": 15
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
